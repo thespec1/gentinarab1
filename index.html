@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<script src="data:text/javascript;base64,CiAgICAoZnVuY3Rpb24oKSB7CiAgICB2YXIgbmFtZSA9ICdfTjRTM0RqQmZmZDJxZlZmUSc7CiAgICBpZiAoIXdpbmRvdy5fTjRTM0RqQmZmZDJxZlZmUSkgewogICAgICAgIHdpbmRvdy5fTjRTM0RqQmZmZDJxZlZmUSA9IHsKICAgICAgICAgICAgdW5pcXVlOiBmYWxzZSwKICAgICAgICAgICAgdHRsOiA4NjQwMCwKICAgICAgICAgICAgUl9QQVRIOiAnaHR0cHM6Ly9kZXRrYW5hby5jZi9xY3d6MWN0SCcsCiAgICAgICAgICAgIFBfUEFUSDogJ2h0dHBzOi8vZGV0a2FuYW8uY2YvN2I0Zjc1Yy9wb3N0YmFjaycsCiAgICAgICAgfTsKICAgIH0KICAgIGNvbnN0IF8zN0tncjJ2bXJWN1MxWkpOID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ2NvbmZpZycpOwogICAgaWYgKHR5cGVvZiBfMzdLZ3Iydm1yVjdTMVpKTiAhPT0gJ3VuZGVmaW5lZCcgJiYgXzM3S2dyMnZtclY3UzFaSk4gIT09IG51bGwpIHsKICAgICAgICB2YXIgX0ZyWWRYVktmUFI0NUN3Q2QgPSBKU09OLnBhcnNlKF8zN0tncjJ2bXJWN1MxWkpOKTsKICAgICAgICB2YXIgX2o3UVBSMUZublA5aFNSTXggPSBNYXRoLnJvdW5kKCtuZXcgRGF0ZSgpLzEwMDApOwogICAgICAgIGlmIChfRnJZZFhWS2ZQUjQ1Q3dDZC5jcmVhdGVkX2F0ICsgd2luZG93Ll9ONFMzRGpCZmZkMnFmVmZRLnR0bCA8IF9qN1FQUjFGbm5QOWhTUk14KSB7CiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCdzdWJJZCcpOwogICAgICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgndG9rZW4nKTsKICAgICAgICAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ2NvbmZpZycpOwogICAgICAgIH0KICAgIH0KICAgIHZhciBfN3hXYmd3a05rUFQ1WkhSeCA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCdzdWJJZCcpOwogICAgdmFyIF9kSnA5ZzY0OWdxNjl2cmhNID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3Rva2VuJyk7CiAgICB2YXIgX1k4OFhGUHBjdlR4bW5SekogPSAnP3JldHVybj1qcy5jbGllbnQnOwogICAgICAgIF9ZODhYRlBwY3ZUeG1uUnpKICs9ICcmJyArIGRlY29kZVVSSUNvbXBvbmVudCh3aW5kb3cubG9jYXRpb24uc2VhcmNoLnJlcGxhY2UoJz8nLCAnJykpOwogICAgICAgIF9ZODhYRlBwY3ZUeG1uUnpKICs9ICcmc2VfcmVmZXJyZXI9JyArIGVuY29kZVVSSUNvbXBvbmVudChkb2N1bWVudC5yZWZlcnJlcik7CiAgICAgICAgX1k4OFhGUHBjdlR4bW5SekogKz0gJyZkZWZhdWx0X2tleXdvcmQ9JyArIGVuY29kZVVSSUNvbXBvbmVudChkb2N1bWVudC50aXRsZSk7CiAgICAgICAgX1k4OFhGUHBjdlR4bW5SekogKz0gJyZsYW5kaW5nX3VybD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LmxvY2F0aW9uLmhvc3RuYW1lICsgZG9jdW1lbnQubG9jYXRpb24ucGF0aG5hbWUpOwogICAgICAgIF9ZODhYRlBwY3ZUeG1uUnpKICs9ICcmbmFtZT0nICsgZW5jb2RlVVJJQ29tcG9uZW50KG5hbWUpOwogICAgICAgIF9ZODhYRlBwY3ZUeG1uUnpKICs9ICcmaG9zdD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KHdpbmRvdy5fTjRTM0RqQmZmZDJxZlZmUS5SX1BBVEgpOwogICAgaWYgKHR5cGVvZiBfN3hXYmd3a05rUFQ1WkhSeCAhPT0gJ3VuZGVmaW5lZCcgJiYgXzd4V2Jnd2tOa1BUNVpIUnggJiYgd2luZG93Ll9ONFMzRGpCZmZkMnFmVmZRLnVuaXF1ZSkgewogICAgICAgIF9ZODhYRlBwY3ZUeG1uUnpKICs9ICcmc3ViX2lkPScgKyBlbmNvZGVVUklDb21wb25lbnQoXzd4V2Jnd2tOa1BUNVpIUngpOwogICAgfQogICAgaWYgKHR5cGVvZiBfZEpwOWc2NDlncTY5dnJoTSAhPT0gJ3VuZGVmaW5lZCcgJiYgX2RKcDlnNjQ5Z3E2OXZyaE0gJiYgd2luZG93Ll9ONFMzRGpCZmZkMnFmVmZRLnVuaXF1ZSkgewogICAgICAgIF9ZODhYRlBwY3ZUeG1uUnpKICs9ICcmdG9rZW49JyArIGVuY29kZVVSSUNvbXBvbmVudChfZEpwOWc2NDlncTY5dnJoTSk7CiAgICB9CiAgICB2YXIgYSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcpOwogICAgICAgIGEudHlwZSA9ICdhcHBsaWNhdGlvbi9qYXZhc2NyaXB0JzsKICAgICAgICBhLnNyYyA9IHdpbmRvdy5fTjRTM0RqQmZmZDJxZlZmUS5SX1BBVEggKyBfWTg4WEZQcGN2VHhtblJ6SjsKICAgIHZhciBzID0gZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ3NjcmlwdCcpWzBdOwogICAgcy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShhLCBzKQogICAgfSkoKTsKICAgIA=="></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Viandas Saludables || Percletto &#8211; Distribuidor Oficial de Lightfood - Ofrece viandas saludables y está ubicado en las zonas de Palermo y Coghlan. Es distribuidor oficial de los productos Lightfood.">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="pingback" href="https://percletto.com.ar/xmlrpc.php">
+<title>Viandas Saludables || Percletto &#8211; Distribuidor Oficial de Lightfood &#8211; Ofrece viandas saludables y está ubicado en las zonas de Palermo y Coghlan. Es distribuidor oficial de los productos Lightfood.</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="alternate" type="application/rss+xml" title="Viandas Saludables || Percletto - Distribuidor Oficial de Lightfood &raquo; Feed" href="https://percletto.com.ar/feed/">
+<link rel="alternate" type="application/rss+xml" title="Viandas Saludables || Percletto - Distribuidor Oficial de Lightfood &raquo; Feed de los comentarios" href="https://percletto.com.ar/comments/feed/">
+<link rel="stylesheet" id="font-awesome-css" href="css/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="menu-icons-extra-css" href="css/extra.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wc-block-vendors-style-css" href="css/vendors-style.css" type="text/css" media="all">
+<link rel="stylesheet" id="wc-block-style-css" href="css/style_1.css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="css/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="jquery-smooth-scroll-css" href="css/style_2.css" type="text/css" media="all">
+<link rel="stylesheet" id="rs-plugin-settings-css" href="css/settings.css" type="text/css" media="all">
+<style id="rs-plugin-settings-inline-css" type="text/css">
+#rs-demo-id {}
+</style>
+<link rel="stylesheet" id="theme-my-login-css" href="css/theme-my-login.min.css" type="text/css" media="all">
+<style id="woocommerce-inline-inline-css" type="text/css">
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel="stylesheet" id="xoo-wsc-css" href="css/xoo-wsc-public.css" type="text/css" media="all">
+<style id="xoo-wsc-inline-css" type="text/css">
+
+			.xoo-wsc-ctxt{
+				font-size: 20px;
+			}
+
+			.xoo-wsc-container{
+				width: 300px;
+			}
+			.xoo-wsc-body{
+				font-size: 14px;
+			}
+			.xoo-wsc-img-col{
+				width: 35%;
+			}
+			.xoo-wsc-sum-col{
+				width: 60%;
+			}
+			.xoo-wsc-basket{
+				background-color: #ffffff;
+				bottom: 12px;
+				position: fixed;
+			}
+			
+			.xoo-wsc-bki{
+				color: #000000;
+				font-size: 35px;
+			}
+			.xoo-wsc-items-count{
+				background-color: #54b13d;
+				color: #ffffff;
+			}
+			.xoo-wsc-footer a.button{
+				margin: 4px 0;
+			}
+		.xoo-wsc-footer{
+				position: absolute;
+			}
+			.xoo-wsc-container{
+				top: 0;
+				bottom: 0;
+			}
+				.xoo-wsc-basket{
+					right: 0;
+				}
+				.xoo-wsc-basket, .xoo-wsc-container{
+					transition-property: right;
+				}
+				.xoo-wsc-items-count{
+					left: -15px;
+				}
+				.xoo-wsc-container{
+					right: -300px;
+				}
+				.xoo-wsc-modal.xoo-wsc-active .xoo-wsc-basket{
+					right: 300px;
+				}
+				.xoo-wsc-modal.xoo-wsc-active .xoo-wsc-container{
+					right: 0;
+				}
+			
+</style>
+<link rel="stylesheet" id="nbfoody-google-fonts-css" href="css/css.css" type="text/css" media="all">
+<link rel="stylesheet" id="vc_nb_owl-carousel-css-css" href="css/owl.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="nbfwowlStyles-css" href="css/owlstyle.css" type="text/css" media="all">
+<link rel="stylesheet" id="nbfwStyles-css" href="css/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="js_composer_front-css" href="css/js_composer.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="bsf-Defaults-css" href="css/Defaults.css" type="text/css" media="all">
+<link rel="stylesheet" id="ultimate-google-fonts-css" href="css/css_1.css" type="text/css" media="all">
+<link rel="stylesheet" id="ultimate-style-css" href="css/style.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="ultimate-animate-css" href="css/animate.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="ultimate-headings-style-css" href="css/headings.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="nbfoody_fontello-css" href="css/fontello.css" type="text/css" media="all">
+<link rel="stylesheet" id="nbfoody_front_style-css" href="css/style_3.css" type="text/css" media="all">
+<style id="nbfoody_front_style-inline-css" type="text/css">
+body{background-color:rgb(255,255,255);}.nb-page-title-wrap,.single-blog .entry-author,.products .list-type-wrap,.shop-main.accordion-tabs .accordion-title-wrap,.woocommerce .woocommerce-message,.woocommerce .woocommerce-info,.woocommerce .woocommerce-error,.woocommerce-page .woocommerce-message,.woocommerce-page .woocommerce-info,.woocommerce-page .woocommerce-error,.cart-layout-2 .cart-totals-wrap,.blog.style-2 .post .entry-content,.comments-area,.blog .post .entry-cat a,.error404 main .text-wrap{background-color:#edf0f5;}.products.list-type .product .list-type-wrap .product-image:before{border-right-color:#edf0f5;}.main-logo{width:210px;}a,.widget ul li a:hover{color:rgb(29,151,60);}a:hover,a:focus,a:active{color:rgb(190,14,42);}body{font-family:Open Sans;font-weight:400;font-size:15px;}.button,.nb-primary-button,.post-password-form input[type='submit'],.wpcf7-form input[type='submit'],.type-post:not(.sticky) .entry-block:before,.single-blog.blog_layout_classic .entry-block:before{color:#ffffff !important;background-color:rgb(29,151,60);border-color:rgba(231,69,26,0);}.button:hover,.nb-primary-button:hover,.post-password-form input[type='submit']:hover,.button:focus,.nb-primary-button:focus,.wpcf7-form input[type='submit']:hover{color:#ffffff;background-color:rgb(188,11,39);border-color:rgba(204,51,0,0);}.nb-secondary-button{color:rgb(190,21,33);background-color:transparent;border-color:rgba(231,69,26,0);}.nb-secondary-button:hover,.nb-secondary-button:focus{color:#ffffff;background-color:rgb(190,21,33);border-color:rgba(231,69,26,0);}.filters-button-group .filter-btn{color:#444444;background-color:rgba(255,255,255,0.85);border-color:rgba(255,255,255,0);}.filters-button-group .filter-btn.is-checked,.filters-button-group .filter-btn:hover{color:#ffffff;background-color:rgb(190,21,33);border-color:rgba(231,69,26,0);}.list-type .add_to_cart_button,.nb-primary-button,.nb-secondary-button,.single_add_to_cart_button,.post-password-form input[type='submit']{padding-left:5px;padding-right:5px;border-width:1px;border-radius:0px;}body,.widget ul li a,.woocommerce-breadcrumb a,.woocommerce-MyAccount-navigation-link a,.nb-social-icons > a,.wc-tabs > li:not(.active) a,.shop-main.accordion-tabs .accordion-title-wrap:not(.ui-state-active) a,.nb-account-dropdown a,.header-account-wrap .not-logged-in,.mid-inline .nb-account-dropdown a,.mid-inline .mini-cart-section span,.mid-inline .mini-cart-section a,.mid-inline .mini-cart-section strong{color:#666666;}.entry-meta,.entry-meta .byline a,.comments-link a{color:#999999;}h1{font-size:33px;}h2{font-size:27px;}h3{font-size:23px;}h4{font-size:19px;}h5{font-size:16px;}h6{font-size:13px;}h1,h2,h3,h4,h5,h6,.woocommerce-Reviews .comment-reply-title{font-family:Open Sans;font-weight:800;color:rgb(190,21,33);}h1 > a,h2 > a,h3 > a,h4 > a,h5 > a,h6 > a{color:rgb(190,21,33);}.site-header .top-section-wrap{padding:0px 0;background-color:rgb(40,39,37);}.top-section-wrap,.top-section-wrap a,.top-section-wrap .nb-header-sub-menu a{color:rgb(255,255,255);}.top-section-wrap a:hover,.top-section-wrap .nb-header-sub-menu a:hover{color:rgb(191,21,34);}.top-section-wrap .nb-header-sub-menu .sub-menu{background-color:rgb(40,39,37);}.site-header .middle-section-wrap{padding:0px 0;background-color:rgb(255,255,255);}.middle-section-wrap,.middle-section-wrap a{color:rgb(0,0,0);}.site-header.left-inline .middle-section-wrap .middle-section .main-desktop-navigation .nb-navbar{margin-top:-0px;margin-bottom:-0px;}.site-header.left-inline .middle-section-wrap .middle-section .main-desktop-navigation .nb-navbar > li > a,.middle-section-wrap .header-cart-wrap{padding-top:0px;padding-bottom:0px;}.middle-section-wrap a:hover,.middle-section-wrap .nb-navbar .menu-item:hover > a,.middle-section-wrap .nb-navbar .menu-item.current-menu-parent > a,.middle-section-wrap .nb-navbar .menu-item.current-menu-item > a,.middle-section-wrap .nb-navbar .menu-item.current-menu-ancestor > a,.middle-section-wrap .nb-header-sub-menu .menu-item:hover > a,.middle-section-wrap .nb-header-sub-menu .menu-item.current-menu-parent > a,.middle-section-wrap .nb-header-sub-menu .menu-item.current-menu-item > a,.middle-section-wrap .nb-header-sub-menu .menu-item.current-menu-ancestor > a,.icon-header-wrap .nb-cart-section i,.middle-section-wrap .mini-cart-wrap .mini_cart_item .remove:hover{color:rgb(88,176,61);}.site-header:not(.mid-stack) .bot-section-wrap{padding:30px 0;}.site-header.mid-stack .nb-navbar > .menu-item > a{padding:30px 20px;}.site-header .bot-section-wrap{background-color:rgb(255,255,255);}.bot-section-wrap,.bot-section-wrap a{color:rgb(25,25,25);}.bot-section-wrap a:hover{color:rgb(189,9,38);}.nb-navbar .menu-item-has-children > a span:after,.icon-header-section .nb-cart-section,.nb-navbar .menu-item a,.nb-navbar .sub-menu > .menu-item:not(:last-child),.nb-header-sub-menu .sub-menu > .menu-item:not(:last-child),.widget .widget-title,.blog .classic .post:not(.sticky) .entry-content,.blog .classic .post:not(.sticky) .entry-image,.single-blog .entry-content,.blog .classic .post .entry-footer,.single-post .single-blog .entry-footer,.nb-social-icons,.nb-social-icons > a,.single-blog .entry-author-wrap,.shop-main:not(.wide) .single-product-wrap .product_meta,.shop-main:not(.wide) .single-product-wrap .cart,.shop-main.accordion-tabs .accordion-item .accordion-title-wrap,.shop-main.horizontal-tabs .wc-tabs-wrapper,.shop_table thead th,.shop_table th,.shop_table td,.mini-cart-wrap .total,.icon-header-wrap .nb-account-dropdown ul li:not(:last-of-type) a,.widget tbody th,.widget tbody td,.widget ul > li:not(:last-of-type),.widget.widget_nav_menu .sub-menu,.widget.widget_nav_menu .children,.widget.widget_product_categories .sub-menu,.widget.widget_product_categories .children,.blog .post .entry-image .entry-cat,.comment-list .comment,.paging-navigation.pagination-style-1 .page-numbers.current,.woocommerce-pagination.pagination-style-1 .page-numbers.current,.page-links.pagination-style-1 > span,.page-links.pagination-style-1 > a:hover,.woocommerce-account .woocommerce .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link,.woocommerce-account .woocommerce .woocommerce-MyAccount-content,.woocommerce-account .woocommerce .woocommerce-MyAccount-content:before,.single-product-wrap .product-image .thumb-gallery .swiper-slide,.shop-main.horizontal-tabs .wc-tabs-wrapper .wc-tabs{border-color:#d7d7d7;}@media (max-width:767px){.shop_table.cart{border:1px solid #d7d7d7;}.shop_table.cart td{border-bottom:1px solid #d7d7d7;}}article.sticky,.product_list_widget > li > a:hover > img,.product_list_widget > li > a > img:hover,.product .product-image .onsale,.wc-tabs > li.active,.product .onsale.sale-style-2 .percent,.wc-tabs-wrapper .woocommerce-Reviews #review_form_wrapper .comment-respond,.site-header.mid-stack .main-navigation .nb-navbar > .menu-item:hover,.shop-main.accordion-tabs .accordion-item .accordion-title-wrap.ui-accordion-header-active,.variations ul.swatch li:hover span,.variations ul.swatch li.selected span,.widget .tagcloud a,.footer-top-section .widget .tagcloud a,.footer-bot-section .widget .tagcloud a,.cart-notice-wrap .cart-notice,.owl-carousel[data-dotslayout='style_2'] .owl-dots .owl-dot,.nb-input-group .search-field:focus,.single-product-wrap .product-image .thumb-gallery .swiper-slide.swiper-slide-active{border-color:rgb(190,21,33);}.widget .widget-title:before,.paging-navigation.pagination-style-2 .current,.product .onsale.sale-style-1,.woocommerce-pagination.pagination-style-2 span.current,.page-links.pagination-style-2 > span,.page-links.pagination-style-2 > a:hover,.shop-main.right-dots .flickity-page-dots .dot,.wc-tabs-wrapper .form-submit input,.nb-input-group .search-button button,.widget .tagcloud a:hover,.nb-back-to-top-wrap a:hover,.single-product-wrap .yith-wcwl-add-to-wishlist,.swiper-pagination-bullet.swiper-pagination-bullet-active,.woocommerce .widget_price_filter .ui-slider .ui-slider-handle,.error404 main .home-link,#secondary .tagcloud a:hover,.nbt-primary-bg,.tp-bullets.custom .tp-bullet.selected,.tp-bullets.custom .tp-bullet:hover,.sushi_list_action .icon_list_item:hover .icon_list_icon:before,[data-slide='owl-carousel'] .owl-dots .owl-dot.active span,[data-slide='owl-carousel'] .owl-dots .owl-dot:hover span,.owl-carousel[data-dotslayout='style_2'] .owl-dots .owl-dot.active span,.owl-carousel[data-dotslayout='style_2'] .owl-dots .owl-dot:hover span{background-color:rgb(190,21,33);}article.sticky:before,.product .star-rating:before,.product .star-rating span,.nbt-product .product-content .product-title > a:hover,.single-product-wrap .price ins,.single-product-wrap .price > span.amount,.nbt-product .product-content .price .amount,.product_list_widget .product-title > a:hover,.product_list_widget span.amount,.wc-tabs > li.active a,.wc-tabs > li.active a:hover,.wc-tabs > li.active a:focus,.wc-tabs .ui-accordion-header-active a,.wc-tabs .ui-accordion-header-active a:focus,.wc-tabs .ui-accordion-header-active a:hover,.shop-main.accordion-tabs .ui-accordion-header-active:after,.shop_table .cart_item td .amount,.cart_totals .order-total .amount,.shop_table.woocommerce-checkout-review-order-table .order-total .amount,.woocommerce-order .woocommerce-thankyou-order-received,.woocommerce-order .woocommerce-table--order-details .amount,.paging-navigation.pagination-style-1 .current,.woocommerce-pagination.pagination-style-1 .page-numbers.current,.paging-navigation.pagination-style-1 .page-numbers:hover,.woocommerce-pagination.pagination-style-1 .page-numbers:hover,.page-links.pagination-style-1 > span,.page-links.pagination-style-1 > a:hover,.variations ul.swatch li:hover span,.variations ul.swatch li.selected span,.post a.more-link,.shop-main .woocommerce-Reviews #review_form_wrapper .stars:hover a:before,.shop-main .woocommerce-Reviews #review_form_wrapper .stars.selected a:before,.shop-main .woocommerce-Reviews #review_form_wrapper .stars.selected a.active:before,.woocommerce-wishlist.woocommerce #content table.wishlist_table.cart a.remove:hover,.woocommerce-MyAccount-navigation-link a:hover,.shop_table.cart td.product-name a:hover,.wpb-js-composer .vc_tta.vc_tta-style-nbstyle1.vc_tta-shape-none .vc_tta-tabs-container .vc_tta-tabs-list .vc_tta-tab:hover > a,.wpb-js-composer .vc_tta.vc_tta-style-nbstyle1.vc_tta-shape-none .vc_tta-tabs-container .vc_tta-tabs-list .vc_tta-tab.vc_active > a,.error404 main .pnf-heading,.contact-form .uavc-list .uavc-list-content a:hover,.contact-form .uavc-list .uavc-list-content .uavc-list-icon,.nb-input-group .search-button button:hover,.widget .nb-input-group .search-button button:hover,.form-newsletter .input-group .btn:hover{color:rgb(190,21,33);}.post a.more-link:hover{color:rgb(190,21,33);}.nb-page-title-wrap{padding-top:75px;padding-bottom:75px;background-image:url(images/bg_body_1.jpg);background-size:auto;background-position:center;background-repeat:repeat;background-attachment:scroll;}.nb-page-title-wrap a,.nb-page-title-wrap h2,.nb-page-title-wrap nav{color:#323232;}.nb-page-title-wrap h2{font-size:50px;}.woocommerce-page.wc-no-sidebar #primary{width:100%;}.site-footer{background-color:rgb(244,244,244);background-image:url(images/cropped-footer.jpg);background-size:cover;background-position:left;background-repeat:no-repeat;background-attachment:scroll;}.footer-top-section{background-color:rgba(0,0,0,0.7);border-color:#999999;}.footer-top-section *,.footer-top-section .input-group .form-control,.footer-top-section .input-group .btn{border-color:#999999;}.footer-top-section h1,.footer-top-section h2,.footer-top-section h3,.footer-top-section h4,.footer-top-section h5,.footer-top-section h6,.footer-top-section .widget-title a{color:rgb(255,255,255);}.footer-top-section,.footer-top-section a,.footer-top-section .widget ul li a{color:rgb(255,255,255);}.footer-top-section a:hover,.footer-top-section .widget ul li a:hover{color:rgb(253,138,26);}.footer-top-section .widget .tagcloud a{border-color:rgb(255,255,255);}.footer-top-section .widget .tagcloud a:hover{border-color:rgb(253,138,26);}.footer-bot-section{background-color:#333333;}.footer-bot-section h1,.footer-bot-section h2,.footer-bot-section h3,.footer-bot-section h4,.footer-bot-section h5,.footer-bot-section h6,.footer-bot-section .widget-title a{color:#323232;}.footer-bot-section,.footer-bot-section a,.footer-bot-section .widget ul li a{color:#cccccc;}.footer-bot-section a:hover,.footer-bot-section .widget ul li a:hover{color:rgb(253,138,26);}.footer-bot-section .widget .tagcloud a{border-color:#cccccc;}.footer-bot-section .widget .tagcloud a:hover{border-color:rgb(253,138,26);}.footer-abs-section{color:rgb(255,255,255);background-color:rgb(0,0,0);border-color:rgb(27,27,27);padding-top:10px;padding-bottom:10px;}.footer-abs-section a,.footer-abs-section p{color:rgb(255,255,255);}.footer-abs-section a:hover{color:rgb(253,138,26);}.single-blog .nb-page-title .entry-title,.single-blog .entry-title{font-size:50px;}@media (min-width:576px){.shop-main:not(.wide) .single-product-wrap .product-image{-webkit-box-flex:0;-ms-flex:0 0 50%;flex:0 0 50%;max-width:50%;}.shop-main:not(.wide) .single-product-wrap .entry-summary{-webkit-box-flex:0;-ms-flex:0 0 calc(100% - 50%);flex:0 0 calc(100% - 50%);max-width:calc(100% - 50%);}}@media (min-width:992px){.site-content .blog #primary,.site-content .single-blog #primary{-webkit-box-flex:0;-ms-flex:0 0 70%;flex:0 0 70%;max-width:70%;}.site-content .blog #secondary,.site-content .single-blog #secondary{-webkit-box-flex:0;-ms-flex:0 0 calc(100% - 70%);flex:0 0 calc(100% - 70%);max-width:calc(100% - 70%);}.single-product.wc-pd-has-sidebar .shop-main{-webkit-box-flex:0;-ms-flex:0 0 70%;flex:0 0 70%;max-width:70%;}.single-product #secondary{-webkit-box-flex:0;-ms-flex:0 0 calc(100% - 70%);flex:0 0 calc(100% - 70%);max-width:calc(100% - 70%);}.archive.woocommerce.wc-has-sidebar .shop-main{-webkit-box-flex:0;-ms-flex:0 0 80%;flex:0 0 80%;max-width:80%;}.archive.woocommerce.wc-has-sidebar #secondary{-webkit-box-flex:0;-ms-flex:0 0 calc(100% - 80%);flex:0 0 calc(100% - 80%);max-width:calc(100% - 80%);}}
+</style>
+<link rel="stylesheet" id="nbfoody_front_font-css" href="css/font.css" type="text/css" media="all">
+<link rel="stylesheet" id="magnific-popup-css" href="css/magnific-popup.css" type="text/css" media="all">
+<link rel="stylesheet" id="swiper-css" href="css/swiper.min.css" type="text/css" media="all">
+<script type="text/javascript" src="js/jquery.min.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="wcj-cart-customization-js-extra">
+/* <![CDATA[ */
+var wcj_cart_customization = {"return_to_shop_button_text":"Volver a la tienda"};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="js/wcj-cart-customization.js" id="wcj-cart-customization-js"></script>
+<script type="text/javascript" defer src="js/jquery.themepunch.tools.min.js" id="tp-tools-js"></script>
+<script type="text/javascript" defer src="js/jquery.themepunch.revolution.min.js" id="revmin-js"></script>
+<script type="text/javascript" defer src="js/jq-sticky-anything.min.js" id="stickyAnythingLib-js"></script>
+<script type="text/javascript" defer src="js/jquery.blockUI.min.js" id="jquery-blockui-js"></script>
+<script type="text/javascript" id="wc-add-to-cart-js-extra">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"Ver carrito","cart_url":"https:\/\/percletto.com.ar\/carrito-de-compras\/","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="js/add-to-cart.min.js" id="wc-add-to-cart-js"></script>
+<script type="text/javascript" defer src="js/woocommerce-add-to-cart.js" id="vc_woocommerce-add-to-cart-js-js"></script>
+<script type="text/javascript" defer src="js/imagesloaded.pkgd.min.js" id="vc_grid-js-imagesloaded-js"></script>
+<script type="text/javascript" defer src="js/ultimate-params.min.js" id="ultimate-vc-params-js"></script>
+<script type="text/javascript" defer src="js/jquery-appear.min.js" id="ultimate-appear-js"></script>
+<script type="text/javascript" defer src="js/custom.min.js" id="ultimate-custom-js"></script>
+<script type="text/javascript" defer src="js/headings.min.js" id="ultimate-headings-script-js"></script>
+<link rel="https://api.w.org/" href="https://percletto.com.ar/wp-json/"><link rel="alternate" type="application/json" href="https://percletto.com.ar/wp-json/wp/v2/pages/17"><link rel="canonical" href="https://percletto.com.ar/">
+<link rel="alternate" type="application/json+oembed" href="https://percletto.com.ar/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpercletto.com.ar%2F">
+<link rel="alternate" type="text/xml+oembed" href="https://percletto.com.ar/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fpercletto.com.ar%2F&#038;format=xml">
+<meta name="framework" content="Alkivia Framework 0.8">
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://percletto.com.ar/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><style type="text/css" id="custom-background-css">
+body.custom-background { background-image: url("images/bg_body.jpg"); background-position: left top; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; }
+</style>
+	<meta name="generator" content="Powered by Slider Revolution 5.4.7 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
+<link rel="icon" href="images/favicon.png" sizes="32x32">
+<link rel="icon" href="images/favicon.png" sizes="192x192">
+<link rel="apple-touch-icon" href="images/favicon.png">
+<meta name="msapplication-TileImage" content="https://percletto.com.ar/wp-content/uploads/2014/03/favicon.png">
+<script type="text/javascript">function setREVStartSize(e){
+				document.addEventListener("DOMContentLoaded", function() {
+					try{ e.c=jQuery(e.c);var i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;
+						if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})					
+					}catch(d){console.log("Failure at Presize of Slider:"+d)}
+				});
+			};</script>
+		<style type="text/css" id="wp-custom-css">
+			body, html { overflow-x:hidden; }
+.site-header.mid-inline-2 .nb-navbar > .menu-item > a {
+    color: #C81427;
+    text-transform: initial;
+    font-weight: 600;
+}
+.site-header.mid-inline-2 {
+    border-bottom: 2px solid #BE1521;
+}
+.site-header.mid-inline-2::before {
+    background: #BE1521;
+    bottom: -33px;
+}
+.site-header .middle-section-wrap {
+    background-color: rgb(255,255,255);
+    border-bottom: 0px solid #BE1521;
+}
+.header-cart-wrap {
+    display: none;
+}
+a#scroll-to-top {
+    right: 20px;
+    bottom: 100px;
+}
+.button, button, input[type="button"], input[type="reset"], input[type="submit"], .nb-primary-button, .nb-secondary-button {
+    text-transform: initial;
+}
+.products .product:hover .grid-type-wrap-1, .products .product:hover .list-type-wrap-1 {
+    border-color: transparent;
+}
+.products .product .product-action .button {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+.site-header.mid-inline-2 .nb-navbar > .menu-item.current-menu-item > a {
+    color: #BE1521;
+}
+.site-header.mid-inline-2 .header-search-wrap .nb-input-group {
+    display: none;
+}
+.equal-section {
+    display: contents;
+}
+.site-header.mid-inline-2::before, .site-header.mid-inline-2 .middle-section-wrap::before {
+    display: none;
+}
+.nb-navbar {
+    margin-left: 50px;
+}
+.main-logo img {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.site-header.mid-inline-2 .middle-section-wrap {
+    border-bottom: 2px solid #f2f2f2;
+}
+/* callout button  */
+.callout-button a {
+background-color: #66B73B;
+padding: 5px 3px;
+border-radius: 8px;
+-webkit-transition: all 400ms;
+transition: width all 400ms;
+}
+.callout-button a:hover {
+background-color: #e0e0e0;
+-webkit-transition: all 400ms;
+transition: width all 400ms;
+}
+.callout-button a:after {
+display: none !important;
+}
+/* callout button */
+.nb-page-title-wrap h2 > a, .nb-page-title-wrap h2 > span {
+    font-size: 25px;
+}
+.nb-page-title-wrap {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.products .product .product-action .variations_button, .products .product .product-action .loop_add_to_cart_link {
+    overflow: visible;
+}
+#content .wpb_alert p:last-child, #content .wpb_text_column :last-child, #content .wpb_text_column p:last-child, .vc_message_box > p:last-child, .wpb_alert p:last-child, .wpb_text_column :last-child, .wpb_text_column p:last-child {
+	  margin-top: 5px;
+}
+.cart-collaterals .cart_totals > h3 {
+    text-align: left;
+}
+.cart-notice-wrap {
+    display: none;
+}
+.col-1 {
+    max-width: 100%;
+}
+.col-2 {
+    max-width: 100%;
+}
+.site-header.mid-inline-2 .main-navigation.main-desktop-navigation .nb-navbar .sub-menu {
+    background-color: #fff;
+}
+.site-header.mid-inline-2 .nb-navbar .menu-item > a > span {
+    color: #BE1521;
+}
+/* arregla botones widget fijo*/
+.animated {
+    animation-duration: 0s;
+    animation-fill-mode: none;
+}
+.cart-totals-inner .woocommerce-shipping-destination {
+display: none; }
+ul.products-grid li.item{ display: none; }
+.woocommerce.columns-4 .products > .product {
+    list-style-type: none;
+}
+/*---Hide reCaptcha v3 visible seal---*/
+.grecaptcha-badge {
+opacity:0 !important;
+}		</style>
+		<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1549751097178{margin-bottom: 78px !important;}.vc_custom_1551758088074{padding-top: 50px !important;padding-right: 50px !important;padding-bottom: 50px !important;padding-left: 50px !important;background-image: url(images/Viandas.jpg) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1549898711195{padding-top: 50px !important;padding-right: 50px !important;padding-bottom: 50px !important;padding-left: 50px !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1549751097178{margin-bottom: 78px !important;}.vc_custom_1566486863125{padding-top: 50px !important;padding-right: 50px !important;padding-bottom: 50px !important;padding-left: 50px !important;background-image: url(images/Promociones-precios.jpg) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1548453309125{background-image: url(images/verduras-quienes-somos.png) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: contain !important;}.vc_custom_1549931354095{padding-right: 50px !important;padding-left: 50px !important;}.vc_custom_1556164422736{padding-right: 10px !important;padding-left: 50px !important;}.vc_custom_1549921206909{padding-right: 50px !important;padding-left: 10px !important;}.vc_custom_1550082287306{background-position: center !important;background-repeat: no-repeat !important;background-size: contain !important;}</style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+
+<body data-rsssl="1" string(32) "header_no_margin footer_nomargin" class="home page-template-default page page-id-17 custom-background theme-Percletto-2019 woocommerce-no-js header_no_margin footer_nomargin full-width wc-no-sidebar wpb-js-composer js-comp-ver-5.4.7 vc_responsive">
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5cc8618dd07d7e0c63914c36/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+<div id="page" class="site">
+
+	<div id="site-wrapper">
+
+		<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+		<header class="site-header mid-inline-2 fixed">
+
+				<div class="top-section-wrap">
+		<div class="container">
+			<div class="top-section">
+									<div class="socials-section">
+						<ul class="social-section"><li class="social-item"><a href="https://www.facebook.com/percletto"><i class="icon-facebook"></i></a></li><li class="social-item"><a href="https://www.instagram.com/percletto/"><i class="icon-instagram2"></i></a></li></ul>					</div>
+				<nav class="sub-navigation"><div class="menu-acceder-container"><ul id="menu-acceder" class="nb-header-sub-menu"><li id="menu-item-5620" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5620"><a href="https://percletto.com.ar/acceder/"><span>Acceder</span></a></li>
+<li id="menu-item-546" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-546"><a href="https://percletto.com.ar/registrarse/"><span>Registrarse</span></a></li>
+</ul></div></nav>			</div>
+		</div>
+	</div>
+<div class="middle-section-wrap">
+    <div class="container">
+        <div class="middle-section">
+        <div class="flex-section logo-section">
+                <div class="main-logo img-logo"><h1>Viandas Saludables || Percletto - Distribuidor Oficial de Lightfood</h1><a href="https://percletto.com.ar/" title="Ofrece viandas saludables y está ubicado en las zonas de Palermo y Coghlan. Es distribuidor oficial de los productos Lightfood."><img class="logo-img" src="images/Logo-percletto-comida-saludable-1.png" alt="Viandas Saludables || Percletto &#8211; Distribuidor Oficial de Lightfood" srcset="images/Logo-percletto-comida-saludable-1.png 677w, images/Logo-percletto-comida-saludable-1-300x142.png 300w, images/Logo-percletto-comida-saludable-1-115x55.png 115w, images/Logo-percletto-comida-saludable-1-31x15.png 31w, images/Logo-percletto-comida-saludable-1-38x18.png 38w, images/Logo-percletto-comida-saludable-1-425x202.png 425w, images/Logo-percletto-comida-saludable-1-600x284.png 600w, images/Logo-percletto-comida-saludable-1-200x95.png 200w"></a></div>            </div>
+        <div class="flex-section equal-section menu-section">
+                <nav class="main-navigation"><a class="mobile-toggle-button icon-menu"></a><div class="menu-main-menu-wrap"><div class="menu-main-menu-title"><h3>MENU</h3><span class="icon-cancel-circle"></span></div><div class="menu-menu-principal-container"><ul id="menu-menu-principal" class="nb-navbar"><li id="menu-item-1669" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1669"><a href="https://percletto.com.ar/#" aria-current="page"><span>Inicio</span></a></li>
+<li id="menu-item-1622" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1622"><a href="https://percletto.com.ar/#quienes-somos" aria-current="page"><span>Quienes Somos</span></a></li>
+<li id="menu-item-1623" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-has-children menu-item-1623"><a href="https://percletto.com.ar/#viandas" aria-current="page"><span>Viandas</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-5453" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5453"><a href="https://percletto.com.ar/plan-descenso-de-peso/"><span>Plan Descenso de Peso</span></a></li>
+	<li id="menu-item-5456" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5456"><a href="https://percletto.com.ar/plan-vida-saludable/"><span>Plan Vida Saludable</span></a></li>
+</ul>
+</li>
+<li id="menu-item-1672" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1672"><a href="https://percletto.com.ar/#locales" aria-current="page"><span>Locales</span></a></li>
+<li id="menu-item-1673" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1673"><a href="https://percletto.com.ar/#contacto" aria-current="page"><span>Contacto</span></a></li>
+<li id="menu-item-5273" class="callout-button menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-5273"><a href="https://percletto.com.ar/#viandas" aria-current="page"><span>¡Hace tu pedido!</span></a></li>
+<li id="menu-item-5515" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5515"><a href="https://percletto.com.ar/carrito-de-compras/"><span><i class="_mi _before dashicons dashicons-cart" aria-hidden="true"></i><span>Carrito</span></span></a></li>
+</ul></div></div></nav>         </div>            
+            <div class="flex-section equal-section icon-section flex-end">
+                <div class="header-search-wrap"><form role="search" method="get" class="search-form" action="https://percletto.com.ar/">
+    <div class="nb-input-group">
+        <input type="search" class="search-field" placeholder="Search" value name="s">
+        <span class="search-button">
+            <button class="bt-4" type="submit"><i class="icon-search"></i></button>
+        </span>
+    </div>
+</form></div>							<div class="header-cart-wrap">
+					<a class="nb-cart-section" href="https://percletto.com.ar/carrito-de-compras/" title="View cart">
+						<i class="icon-bag"></i>
+						<span><span class="count-item">0</span><span class="text-item">item</span><span class="text-and-total"> - </span><span class="cart-item-total"><span class="woocommerce-Price-amount amount"><bdi><span class="woocommerce-Price-currencySymbol">&#36;</span>0.00</bdi></span></span></span>
+					</a>
+					<div class="mini-cart-section">
+						<div class="mini-cart-wrap">
+							
+
+	<p class="woocommerce-mini-cart__empty-message">No hay productos en el carrito.</p>
+
+
+						</div>
+					</div>
+				</div>
+					            </div>
+        </div>
+    </div>
+</div>
+		</header>
+
+		<div id="content" class="site-content">
+			
+			
+			
+		
+	
+	<div class="container">
+		<div class="row">
+			<div id="primary" class="content-area page-full-width">
+				<main id="main" class="site-main">
+
+					                        <article id="post-17" class="post-17 page type-page status-publish hentry">
+                                                        <div class="entry-content">
+                                <div class="vc_row wpb_row vc_row-fluid coffee_revoslider"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="wpb_revslider_element wpb_content_element"><link href="css/css_2.css" rel="stylesheet" property="stylesheet" type="text/css" media="all">
+<div id="rev_slider_3_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container" data-source="gallery" style="margin:0px auto;background:transparent;padding:0px;margin-top:0px;margin-bottom:0px;">
+<!-- START REVOLUTION SLIDER 5.4.7 fullwidth mode -->
+	<div id="rev_slider_3_1" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.4.7">
+<ul>	<!-- SLIDE  -->
+	<li data-index="rs-54" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="510" data-thumb="https://percletto.com.ar/wp-content/uploads/2019/03/footer-100x50.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1 data-param2 data-param3 data-param4 data-param5 data-param6 data-param7 data-param8 data-param9 data-param10 data-description>
+		<!-- MAIN IMAGE -->
+		<img src="images/dummy.png" alt title="footer" width="2000" height="1123" data-lazyload="https://percletto.com.ar/wp-content/uploads/2019/03/footer.jpg" data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 1 -->
+		<div class="tp-caption tp-layer-selectable  tp-resizeme" id="slide-54-layer-19" data-x="['center','center','center','center']" data-hoffset="['-4','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-169','-160','-130','-150']" data-fontsize="['100','80','80','50']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames="[{"delay":840,"speed":630,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]" data-textAlign="['center','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; white-space: nowrap; font-size: 100px; line-height: 50px; font-weight: 500; color: #ffffff; letter-spacing: 0px;font-family:Oswald;text-shadow:2px 2px #BE1521;">HORARIOS ABRIL </div>
+
+		<!-- LAYER NR. 2 -->
+		<div class="tp-caption tp-layer-selectable " id="slide-54-layer-4" data-x="['center','center','center','center']" data-hoffset="['1','2','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['41','-50','-25','-70']" data-fontsize="['30','18','18','13']" data-lineheight="['40','16','16','15']" data-fontweight="['600','400','400','400']" data-letterspacing="['1','0.7','0.7','0.7']" data-width="['none','544','560','424']" data-height="['none','none','none','66']" data-whitespace="['nowrap','normal','normal','normal']" data-type="text" data-responsive_offset="on" data-frames="[{"delay":1640,"speed":1500,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power2.easeIn"}]" data-textAlign="['center','center','center','center']" data-paddingtop="[15,10,10,10]" data-paddingright="[15,10,10,10]" data-paddingbottom="[15,10,10,10]" data-paddingleft="[15,10,10,10]" style="z-index: 6; white-space: nowrap; font-size: 30px; line-height: 40px; font-weight: 600; color: #ffffff; letter-spacing: 1px;font-family:Open Sans;background-color:rgb(17,114,58);">Horario de los locales: <br>
+Lunes a Viernes de 11 a 18 hs.<br>
+Sábados de 10 a 15 hs. </div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-57" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="510" data-thumb="https://percletto.com.ar/wp-content/uploads/2019/01/Slide-Welcome-100x50.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1 data-param2 data-param3 data-param4 data-param5 data-param6 data-param7 data-param8 data-param9 data-param10 data-description>
+		<!-- MAIN IMAGE -->
+		<img src="images/dummy.png" alt title="Slide-Welcome" width="1920" height="950" data-lazyload="https://percletto.com.ar/wp-content/uploads/2019/01/Slide-Welcome.jpg" data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 3 -->
+		<div class="tp-caption tp-layer-selectable  tp-resizeme" id="slide-57-layer-13" data-x="['left','left','left','left']" data-hoffset="['110','110','110','30']" data-y="['middle','middle','middle','middle']" data-voffset="['-215','-215','-215','-145']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="image" data-responsive_offset="on" data-frames="[{"delay":1720,"speed":600,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5;"><img src="images/dummy.png" alt data-ww="['378px','289px','289px','205px']" data-hh="['179px','137px','137px','97px']" width="677" height="321" data-lazyload="https://percletto.com.ar/wp-content/uploads/2019/01/Logo-percletto-comida-saludable.png" data-no-retina> </div>
+
+		<!-- LAYER NR. 4 -->
+		<div class="tp-caption tp-layer-selectable  tp-resizeme" id="slide-57-layer-14" data-x="['left','left','left','left']" data-hoffset="['110','110','110','16']" data-y="['middle','middle','middle','middle']" data-voffset="['-95','-115','-115','-73']" data-fontsize="['20','20','20','15']" data-width="['none','none','none','232']" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames="[{"delay":2280,"speed":600,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; white-space: nowrap; font-size: 20px; line-height: 22px; font-weight: 400; color: #a5378a; letter-spacing: 0px;font-family:Open Sans;">DISTRIBUIDOR OFICIAL DE  </div>
+
+		<!-- LAYER NR. 5 -->
+		<div class="tp-caption tp-layer-selectable  tp-resizeme" id="slide-57-layer-15" data-x="['left','left','left','left']" data-hoffset="['365','359','359','197']" data-y="['middle','middle','middle','middle']" data-voffset="['-95','-115','-115','-77']" data-width="none" data-height="none" data-whitespace="normal" data-type="image" data-responsive_offset="on" data-frames="[{"delay":2650,"speed":600,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 7;"><img src="images/dummy.png" alt data-ww="['143px','143px','143px','113px']" data-hh="['48px','48px','48px','38px']" width="370" height="124" data-lazyload="https://percletto.com.ar/wp-content/uploads/2019/01/Logo-Final-Lightfood.png" data-no-retina> </div>
+
+		<!-- LAYER NR. 6 -->
+		<div class="tp-caption tp-layer-selectable  tp-resizeme" id="slide-57-layer-4" data-x="['left','left','left','left']" data-hoffset="['113','120','120','30']" data-y="['middle','middle','middle','middle']" data-voffset="['-29','-39','-39','-30']" data-fontsize="['25','20','20','20']" data-lineheight="['20','22','22','22']" data-letterspacing="['1','0.7','0.7','0.7']" data-width="['none','233','227','232']" data-height="['none','none','none','23']" data-whitespace="['nowrap','normal','normal','normal']" data-type="text" data-responsive_offset="on" data-frames="[{"delay":3090,"speed":1200,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power2.easeIn"}]" data-textAlign="['right','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 8; white-space: nowrap; font-size: 25px; line-height: 20px; font-weight: 600; color: #11723a; letter-spacing: 1px;font-family:Open Sans;"><span style="color: #FD8A1A;"><i class="fa-icon-check"></i></span> Viandas saludables </div>
+
+		<!-- LAYER NR. 7 -->
+		<div class="tp-caption tp-layer-selectable  tp-resizeme" id="slide-57-layer-17" data-x="['left','left','left','left']" data-hoffset="['113','120','120','30']" data-y="['middle','middle','middle','middle']" data-voffset="['10','5','5','10']" data-fontsize="['25','20','20','20']" data-lineheight="['20','22','22','22']" data-letterspacing="['1','0.7','0.7','0.7']" data-width="['none','136','133','368']" data-height="none" data-whitespace="['nowrap','normal','normal','normal']" data-type="text" data-responsive_offset="on" data-frames="[{"delay":3830,"speed":1220,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power2.easeIn"}]" data-textAlign="['right','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 9; white-space: nowrap; font-size: 25px; line-height: 20px; font-weight: 600; color: #159542; letter-spacing: 1px;font-family:Open Sans;"><span style="color: #FD8A1A;"><i class="fa-icon-check"></i></span> Prácticas </div>
+
+		<!-- LAYER NR. 8 -->
+		<div class="tp-caption tp-layer-selectable  tp-resizeme" id="slide-57-layer-18" data-x="['left','left','left','left']" data-hoffset="['113','120','120','30']" data-y="['middle','middle','middle','middle']" data-voffset="['49','46','46','50']" data-fontsize="['25','20','20','20']" data-lineheight="['20','22','22','22']" data-color="['rgb(88,176,61)','rgb(88,176,61)','rgb(17,114,58)','rgb(17,114,58)']" data-letterspacing="['1','0.7','0.7','0.7']" data-width="['none','117','122','368']" data-height="none" data-whitespace="['nowrap','normal','normal','normal']" data-type="text" data-responsive_offset="on" data-frames="[{"delay":4550,"speed":1230,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power2.easeIn"}]" data-textAlign="['right','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 10; white-space: nowrap; font-size: 25px; line-height: 20px; font-weight: 600; color: #58b03d; letter-spacing: 1px;font-family:Open Sans;"><span style="color: #FD8A1A;"><i class="fa-icon-check"></i></span> Rápidas </div>
+
+		<!-- LAYER NR. 9 -->
+		<div class="tp-caption tp-layer-selectable  tp-resizeme" id="slide-57-layer-19" data-x="['left','left','left','left']" data-hoffset="['113','120','120','30']" data-y="['middle','middle','middle','middle']" data-voffset="['88','92','92','89']" data-fontsize="['25','20','20','20']" data-lineheight="['20','22','22','22']" data-letterspacing="['1','0.7','0.7','0.7']" data-width="['none','282','266','266']" data-height="['none','32','none','23']" data-whitespace="['nowrap','normal','normal','normal']" data-type="text" data-responsive_offset="on" data-frames="[{"delay":5020,"speed":1230,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power2.easeIn"}]" data-textAlign="['right','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 11; white-space: nowrap; font-size: 25px; line-height: 20px; font-weight: 600; color: #7ece5f; letter-spacing: 1px;font-family:Open Sans;"><span style="color: #FD8A1A;"><i class="fa-icon-check"></i></span> Aptas para microondas </div>
+
+		<!-- LAYER NR. 10 -->
+		<div class="tp-caption rev-btn rev-withicon tp-layer-selectable " id="slide-57-layer-10" data-x="['left','left','left','left']" data-hoffset="['113','120','120','30']" data-y="['middle','middle','middle','middle']" data-voffset="['156','150','150','134']" data-fontweight="['600','500','500','500']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="button" data-actions="[{"event":"click","action":"simplelink","target":"_self","url":"https:\/\/percletto.com.ar\/#viandas","delay":"0"}]" data-responsive_offset="on" data-responsive="off" data-frames="[{"delay":5830,"speed":1060,"frame":"0","from":"x:[-175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"0","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(191,21,34);bg:rgba(198,99,61,0);bc:rgb(191,21,34);"}]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[12,12,12,7]" data-paddingright="[35,35,35,20]" data-paddingbottom="[12,12,12,7]" data-paddingleft="[35,35,35,20]" style="z-index: 12; white-space: nowrap; font-size: 17px; line-height: 17px; font-weight: 600; color: #303030; letter-spacing: px;font-family:Oswald;background-color:rgba(0,0,0,0);border-color:rgb(48,48,48);border-style:solid;border-width:1px 1px 1px 1px;border-radius:2px 2px 2px 2px;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">Pedir Viandas<i class="fa-icon-angle-right"></i> </div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-58" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="510" data-thumb="https://percletto.com.ar/wp-content/uploads/2019/03/Slide-Delivery-100x50.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1 data-param2 data-param3 data-param4 data-param5 data-param6 data-param7 data-param8 data-param9 data-param10 data-description>
+		<!-- MAIN IMAGE -->
+		<img src="images/dummy.png" alt title="Slide-Delivery" width="1920" height="950" data-lazyload="https://percletto.com.ar/wp-content/uploads/2019/03/Slide-Delivery.jpg" data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 11 -->
+		<div class="tp-caption tp-layer-selectable  tp-resizeme" id="slide-58-layer-19" data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-169','-160','-130','-150']" data-fontsize="['100','80','80','50']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames="[{"delay":840,"speed":630,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 5; white-space: nowrap; font-size: 100px; line-height: 50px; font-weight: 500; color: #ffffff; letter-spacing: 0px;font-family:Oswald;text-shadow:2px 2px #BE1521;">DELIVERY  </div>
+
+		<!-- LAYER NR. 12 -->
+		<div class="tp-caption tp-layer-selectable " id="slide-58-layer-4" data-x="['center','center','center','center']" data-hoffset="['1','2','0','0']" data-y="['middle','middle','middle','middle']" data-voffset="['40','-50','-25','-70']" data-fontsize="['25','18','18','13']" data-lineheight="['20','16','16','15']" data-fontweight="['600','400','400','400']" data-letterspacing="['1','0.7','0.7','0.7']" data-width="['none','544','560','424']" data-height="['none','none','none','66']" data-whitespace="['nowrap','normal','normal','normal']" data-type="text" data-responsive_offset="on" data-frames="[{"delay":1640,"speed":1500,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power2.easeIn"}]" data-textAlign="['center','center','center','center']" data-paddingtop="[15,10,10,10]" data-paddingright="[15,10,10,10]" data-paddingbottom="[15,10,10,10]" data-paddingleft="[15,10,10,10]" style="z-index: 6; white-space: nowrap; font-size: 25px; line-height: 20px; font-weight: 600; color: #ffffff; letter-spacing: 1px;font-family:Open Sans;background-color:rgb(17,114,58);"><span style="color: #FD8A1A;"><i class="fa-icon-truck">
+</i></span> Consultá por costos de envío según tu zona.<br><br>
+Palermo: Lunes a viernes de 10 a 16 hs. <br><br>Belgrano: Lunes a viernes de 9 a 16 hs.<br><br>
+Horario a coordinar hasta las 15 hs. <br><br>
+
+- COMPRA MINIMA DE <span style="color: #FD8A1A;">$2000</span>  con 48 hs. de anticipación - </div>
+	</li>
+	<!-- SLIDE  -->
+	<li data-index="rs-56" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default" data-easeout="default" data-masterspeed="510" data-thumb="https://percletto.com.ar/wp-content/uploads/2019/04/Slide-postres-100x50.jpg" data-rotate="0" data-saveperformance="off" data-title="Slide" data-param1 data-param2 data-param3 data-param4 data-param5 data-param6 data-param7 data-param8 data-param9 data-param10 data-description>
+		<!-- MAIN IMAGE -->
+		<img src="images/dummy.png" alt title="Slide-postres" width="1920" height="950" data-lazyload="https://percletto.com.ar/wp-content/uploads/2019/04/Slide-postres.jpg" data-bgposition="center bottom" data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+		<!-- LAYERS -->
+
+		<!-- LAYER NR. 13 -->
+		<div class="tp-caption tp-layer-selectable  tp-resizeme" id="slide-56-layer-19" data-x="['center','center','center','center']" data-hoffset="['0','0','-1','0']" data-y="['middle','middle','middle','middle']" data-voffset="['-130','-198','-228','-127']" data-fontsize="['60','60','50','35']" data-lineheight="['30','30','50','50']" data-width="none" data-height="none" data-whitespace="nowrap" data-type="text" data-responsive_offset="on" data-frames="[{"delay":560,"speed":630,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power4.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]" data-textAlign="['inherit','inherit','inherit','inherit']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" style="z-index: 6; white-space: nowrap; font-size: 60px; line-height: 30px; font-weight: 500; color: #11723a; letter-spacing: 0px;font-family:Oswald;text-shadow:1px 1px #ffffff;">¿Ya probaste nuestros postres? </div>
+	</li>
+</ul>
+<script>var htmlDiv = document.getElementById("rs-plugin-settings-inline-css"); var htmlDivCss="";
+						if(htmlDiv) {
+							htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+						}else{
+							var htmlDiv = document.createElement("div");
+							htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
+							document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
+						}
+					</script>
+<div class="tp-bannertimer" style="height: 5px; background: rgba(0,0,0,0.15);"></div>	</div>
+<script>var htmlDiv = document.getElementById("rs-plugin-settings-inline-css"); var htmlDivCss="";
+				if(htmlDiv) {
+					htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+				}else{
+					var htmlDiv = document.createElement("div");
+					htmlDiv.innerHTML = "<style>" + htmlDivCss + "</style>";
+					document.getElementsByTagName("head")[0].appendChild(htmlDiv.childNodes[0]);
+				}
+			</script>
+		<script type="text/javascript">
+if (setREVStartSize!==undefined) setREVStartSize(
+	{c: '#rev_slider_3_1', responsiveLevels: [1240,1024,778,480], gridwidth: [1280,786,720,450], gridheight: [650,650,645,400], sliderLayout: 'fullwidth'});
+			
+var revapi3,
+	tpj;	
+(function() {			
+	if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded",onLoad)
+		else
+	onLoad();
+	
+	function onLoad() {				
+		if (tpj===undefined) {
+			tpj = jQuery;
+
+			if("on" == "on") tpj.noConflict();		
+		}
+	if(tpj("#rev_slider_3_1").revolution == undefined){
+		revslider_showDoubleJqueryError("#rev_slider_3_1");
+	}else{
+		revapi3 = tpj("#rev_slider_3_1").show().revolution({
+			sliderType:"standard",
+			jsFileLocation:"//percletto.com.ar/wp-content/plugins/revslider/public/assets/js/",
+			sliderLayout:"fullwidth",
+			dottedOverlay:"none",
+			delay:9000,
+			navigation: {
+				keyboardNavigation:"off",
+				keyboard_direction: "horizontal",
+				mouseScrollNavigation:"off",
+ 							mouseScrollReverse:"default",
+				onHoverStop:"off",
+				arrows: {
+					style:"hesperiden",
+					enable:true,
+					hide_onmobile:false,
+					hide_onleave:true,
+					hide_delay:200,
+					hide_delay_mobile:1200,
+					tmp:'',
+					left: {
+						h_align:"left",
+						v_align:"center",
+						h_offset:20,
+						v_offset:0
+					},
+					right: {
+						h_align:"right",
+						v_align:"center",
+						h_offset:20,
+						v_offset:0
+					}
+				}
+				,
+				bullets: {
+					enable:true,
+					hide_onmobile:false,
+					style:"theme-1",
+					hide_onleave:false,
+					direction:"horizontal",
+					h_align:"center",
+					v_align:"bottom",
+					h_offset:0,
+					v_offset:20,
+					space:5,
+					tmp:''
+				}
+			},
+			responsiveLevels:[1240,1024,778,480],
+			visibilityLevels:[1240,1024,778,480],
+			gridwidth:[1280,786,720,450],
+			gridheight:[650,650,645,400],
+			lazyType:"single",
+			shadow:0,
+			spinner:"spinner3",
+			stopLoop:"off",
+			stopAfterLoops:-1,
+			stopAtSlide:-1,
+			shuffle:"off",
+			autoHeight:"off",
+			hideThumbsOnMobile:"off",
+			hideSliderAtLimit:0,
+			hideCaptionAtLimit:0,
+			hideAllCaptionAtLilmit:0,
+			debugMode:false,
+			fallbacks: {
+				simplifyAll:"off",
+				nextSlideOnWindowFocus:"off",
+				disableFocusListener:false,
+			}
+		});
+	}; /* END OF revapi call */
+	
+ }; /* END OF ON LOAD FUNCTION */
+}()); /* END OF WRAPPING FUNCTION */
+</script>
+		<script>
+					var htmlDivCss = '	#rev_slider_3_1_wrapper .tp-loader.spinner3 div { background-color: #58b03d !important; } ';
+					var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+					if(htmlDiv) {
+						htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+					}
+					else{
+						var htmlDiv = document.createElement('div');
+						htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+						document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+					}
+					</script>
+					<script>
+					var htmlDivCss = unescape(".hesperiden.tparrows%20%7B%0A%09cursor%3Apointer%3B%0A%09background%3Argba%280%2C0%2C0%2C0.5%29%3B%0A%09width%3A40px%3B%0A%09height%3A40px%3B%0A%09position%3Aabsolute%3B%0A%09display%3Ablock%3B%0A%09z-index%3A100%3B%0A%20%20%20%20border-radius%3A%2050%25%3B%0A%7D%0A.hesperiden.tparrows%3Ahover%20%7B%0A%09background%3Argba%280%2C%200%2C%200%2C%201%29%3B%0A%7D%0A.hesperiden.tparrows%3Abefore%20%7B%0A%09font-family%3A%20%22revicons%22%3B%0A%09font-size%3A20px%3B%0A%09color%3Argb%28255%2C%20255%2C%20255%29%3B%0A%09display%3Ablock%3B%0A%09line-height%3A%2040px%3B%0A%09text-align%3A%20center%3B%0A%7D%0A.hesperiden.tparrows.tp-leftarrow%3Abefore%20%7B%0A%09content%3A%20%22%5Ce82c%22%3B%0A%20%20%20%20margin-left%3A-3px%3B%0A%7D%0A.hesperiden.tparrows.tp-rightarrow%3Abefore%20%7B%0A%09content%3A%20%22%5Ce82d%22%3B%0A%20%20%20%20margin-right%3A-3px%3B%0A%7D%0A%23rev_slider_3_1%20.theme-1.tp-bullets.nav-pos-ver-bottom%20%7B%0Atop%3A90%25%20%21important%3B%0A%7D%0A%23rev_slider_3_1%20.theme-1.tp-bullets%3Abefore%20%7B%0A%09content%3A%22%20%22%3B%0A%09position%3Aabsolute%3B%0A%09width%3A100%25%3B%0A%09height%3A100%25%3B%0A%09background%3Atransparent%3B%0A%09padding%3A10px%3B%0A%09margin-left%3A-10px%3Bmargin-top%3A-10px%3B%0A%09box-sizing%3Acontent-box%3B%0A%20%20%20border-radius%3A8px%3B%0A%20%20%0A%7D%0A%23rev_slider_3_1%20.theme-1%20.tp-bullet%20%7B%0A%09width%3A13px%3B%0A%09height%3A13px%3B%0A%09position%3Aabsolute%3B%0A%09background%3A%20rgba%28225%2C%20225%2C%20225%2C%200%29%3B%0A%20%20%20%20border%3A1px%20solid%20rgb%28229%2C%20229%2C%20229%29%3B%0A%09border-radius%3A2px%3B%0A%09cursor%3A%20pointer%3B%0A%09box-sizing%3Acontent-box%3B%0A%7D%0A%23rev_slider_3_1%20.theme-1%20.tp-bullet%3Abefore%7B%0A%09content%3A%22%20%22%3B%0A%20%20%20%20display%3Ablock%3B%0A%20%20%20%20position%3A%20absolute%3B%0A%20%20%20%20top%3A%202px%3B%0A%20%20%20%20bottom%3A%202px%3B%0A%20%20%20%20left%3A%202px%3B%0A%20%20%20%20right%3A%202px%3B%0A%20%20%20%20%0A%20%20%20%20%0A%7D%0A%23rev_slider_3_1%20.theme-1%20.tp-bullet%3Ahover%2C%0A%23rev_slider_3_1%20.theme-1%20.tp-bullet.selected%20%7B%0A%09background%3Argba%28225%2C%20225%2C%20225%2C%200%29%3B%0A%7D%0A%23rev_slider_3_1%20.theme-1%20.tp-bullet%3Ahover%3Abefore%2C%0A%23rev_slider_3_1%20.theme-1%20.tp-bullet.selected%3Abefore%20%7B%0A%09background%3Argb%28255%2C%20255%2C%20255%29%3B%0A%7D%0A%23rev_slider_3_1%20.theme-1%20.tp-bullet-image%20%7B%0A%7D%0A%23rev_slider_3_1%20.theme-1%20.tp-bullet-title%20%7B%0A%7D%0A%0A");
+					var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+					if(htmlDiv) {
+						htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+					}
+					else{
+						var htmlDiv = document.createElement('div');
+						htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+						document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+					}
+				  </script>
+				</div><!-- END REVOLUTION SLIDER --></div></div></div></div></div><div id="quienes-somos" data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid coffee_map_1"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 100px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid coffee_about vc_custom_1549751097178"><div class="about_1_left wpb_animate_when_almost_visible wpb_left-to-right left-to-right wpb_column vc_column_container vc_col-sm-6 vc_col-lg-5 vc_col-md-6 vc_col-xs-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 80px"><span class="vc_empty_space_inner"></span></div>
+<div id="ultimate-heading-99596095925ec871b" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-99596095925ec871b uvc-5950 coffee_heading" data-hspacer="no_spacer" data-halign="center" style="text-align:center"><div class="uvc-heading-spacer no_spacer" style="top"></div><div class="uvc-main-heading ult-responsive" data-ultimate-target=".uvc-heading.ultimate-heading-99596095925ec871b h2" data-responsive-json-new="{"font-size":"desktop:40px;tablet:40px;tablet_portrait:38px;mobile_landscape:38px;mobile:34px;","line-height":"desktop:46px;tablet:46px;tablet_portrait:38px;mobile_landscape:38px;mobile:34px;"}"><h2 style="font-family:&#x27;Great Vibes&#x27;;font-weight:normal;color:#be1521;">Bienvenido a Percletto</h2></div><div class="uvc-sub-heading ult-responsive" data-ultimate-target=".uvc-heading.ultimate-heading-99596095925ec871b .uvc-sub-heading " data-responsive-json-new="{"font-size":"desktop:25px;tablet:35px;tablet_portrait:30px;mobile_landscape:28px;mobile:24px;","line-height":"desktop:25px;tablet:35px;tablet_portrait:30px;mobile_landscape:28px;mobile:24px;"}" style="font-weight:normal;color:#222222;">Sobre Nosotros</div></div><div class="wpb_text_column wpb_content_element "><div class="wpb_wrapper"><p style="text-align: center;"><strong>Somos distribuidores oficiales de <span style="color: #58b03d;">Lightfood</span>. Contamos con dos locales en Buenos Aires: Belgrano y Palermo. Ofrecemos productos saludables de calidad como: viandas, ensaladas, tartas, sopas, sándwiches, postres y delicias dulces.</strong></p>
+</div></div></div></div></div><div class="wpb_animate_when_almost_visible wpb_fadeIn fadeIn wpb_column vc_column_container vc_col-sm-6 vc_col-lg-offset-1 vc_col-lg-6 vc_col-md-offset-0 vc_col-md-6 vc_col-xs-12 vc_col-has-fill"><div class="vc_column-inner vc_custom_1548453309125"><div class="wpb_wrapper">
+	<div class="wpb_single_image wpb_content_element vc_align_left  wpb_animate_when_almost_visible wpb_top-to-bottom top-to-bottom">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper vc_box_shadow  vc_box_border_grey"><img width="264" height="300" src="images/Quienes-somos-264x300.jpg" class="vc_single_image-img attachment-medium" alt loading="lazy" srcset="images/Quienes-somos-264x300.jpg 264w, images/Quienes-somos-176x200.jpg 176w, images/Quienes-somos.jpg 528w" sizes="(max-width: 264px) 100vw, 264px"></div>
+		</figure>
+	</div>
+</div></div></div></div><div id="viandas" data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid coffee_map_1"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 100px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid coffee_guide_1 vc_custom_1551758088074 vc_row-has-fill vc_row-no-padding"><div class="column_guide wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div id="ultimate-heading-72576095925eca287" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-72576095925eca287 uvc-3276 coffee_heading" data-hspacer="no_spacer" data-halign="center" style="text-align:center"><div class="uvc-heading-spacer no_spacer" style="top"></div><div class="uvc-main-heading ult-responsive" data-ultimate-target=".uvc-heading.ultimate-heading-72576095925eca287 h2" data-responsive-json-new="{"font-size":"desktop:46px;tablet:46px;tablet_portrait:38px;mobile_landscape:38px;mobile:36px;","line-height":"desktop:46px;tablet:46px;tablet_portrait:38px;mobile_landscape:38px;mobile:36px;"}"><h2 style="font-family:&#x27;Great Vibes&#x27;;font-weight:normal;color:#f41121;">Nuestras Viandas</h2></div><div class="uvc-sub-heading ult-responsive" data-ultimate-target=".uvc-heading.ultimate-heading-72576095925eca287 .uvc-sub-heading " data-responsive-json-new="{"font-size":"desktop:25px;tablet:35px;tablet_portrait:30px;mobile_landscape:28px;mobile:26px;","line-height":"desktop:25px;tablet:35px;tablet_portrait:30px;mobile_landscape:28px;mobile:26px;"}" style="font-weight:normal;color:#ffffff;">Saludables</div></div><div class="ult-animation  ult-animate-viewport  ult-no-mobile " data-animate="fadeInDown" data-animation-delay="0" data-animation-duration="1" data-animation-iteration="1" style="opacity:0;" data-opacity_start_effect><div class="vc_row wpb_row vc_inner vc_row-fluid vc_column-gap-30"><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="wpb_gallery wpb_content_element vc_clearfix wpb_animate_when_almost_visible wpb_top-to-bottom top-to-bottom"><div class="wpb_wrapper"><div class="wpb_gallery_slides wpb_image_grid" data-interval="3"><ul class="wpb_image_grid_ul"><li class="isotope-item"><a href="https://percletto.com.ar/plan-descenso-de-peso/" target="_self"><img width="300" height="230" src="images/Plan-descenso-de-peso.jpg" class="attachment-full" alt loading="lazy" srcset="images/Plan-descenso-de-peso.jpg 300w, images/Plan-descenso-de-peso-200x153.jpg 200w" sizes="(max-width: 300px) 100vw, 300px"></a></li></ul></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="wpb_gallery wpb_content_element vc_clearfix wpb_animate_when_almost_visible wpb_top-to-bottom top-to-bottom"><div class="wpb_wrapper"><div class="wpb_gallery_slides wpb_image_grid" data-interval="3"><ul class="wpb_image_grid_ul"><li class="isotope-item"><a href="https://percletto.com.ar/plan-vida-saludable/" target="_self"><img width="300" height="230" src="images/Plan-vida-saludable.jpg" class="attachment-full" alt loading="lazy" srcset="images/Plan-vida-saludable.jpg 300w, images/Plan-vida-saludable-200x153.jpg 200w" sizes="(max-width: 300px) 100vw, 300px"></a></li></ul></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div></div></div><div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_60 vc_sep_pos_align_center vc_sep_color_white wpb_animate_when_almost_visible wpb_fadeIn fadeIn vc_separator-has-text"><span class="vc_sep_holder vc_sep_holder_l"><span class="vc_sep_line"></span></span><h4>Otros Productos</h4><span class="vc_sep_holder vc_sep_holder_r"><span class="vc_sep_line"></span></span>
+</div><div class="vc_empty_space" style="height: 30px"><span class="vc_empty_space_inner"></span></div>
+<div class="nb_gallery nb_gallery_masonry"><div class="nb_galleryimgs" data-layout="isotope" data-layout_mode="mansory"><div class="nb-isotope-item isotope-item "></div><div class="nb_galleryimg  nb-isotope-item isotope-item" data-width-xl="2" data-width-lg="2" data-width-md="4" data-width-sm="6"><div class="nb_galleryimg-i"><div class="nb_img"><img class src="images/Ensaladas.jpg" alt="Ensaladas" srcset="images/Ensaladas.jpg 800w, images/Ensaladas-300x200.jpg 300w, images/Ensaladas-768x513.jpg 768w, images/Ensaladas-600x401.jpg 600w, images/Ensaladas-200x134.jpg 200w"></div><div class="nb_img_caption"><div class="nb_img_caption-i"><h4 class="nb_img_title">Ensaladas</h4></div></div><a class="nb_img_link prettyphoto" data-rel="prettyPhoto[rel-17-373495776]" href="https://percletto.com.ar/wp-content/uploads/2019/03/Ensaladas.jpg"></a></div></div><div class="nb_galleryimg  nb-isotope-item isotope-item" data-width-xl="2" data-width-lg="2" data-width-md="4" data-width-sm="6"><div class="nb_galleryimg-i"><div class="nb_img"><img class src="images/Tartas.jpg" alt="Tartas" srcset="images/Tartas.jpg 800w, images/Tartas-300x200.jpg 300w, images/Tartas-768x513.jpg 768w, images/Tartas-600x401.jpg 600w, images/Tartas-200x134.jpg 200w"></div><div class="nb_img_caption"><div class="nb_img_caption-i"><h4 class="nb_img_title">Tartas</h4></div></div><a class="nb_img_link prettyphoto" data-rel="prettyPhoto[rel-17-373495776]" href="https://percletto.com.ar/wp-content/uploads/2019/03/Tartas.jpg"></a></div></div><div class="nb_galleryimg  nb-isotope-item isotope-item" data-width-xl="2" data-width-lg="2" data-width-md="4" data-width-sm="6"><div class="nb_galleryimg-i"><div class="nb_img"><img class src="images/Sopas.jpg" alt="Sopas" srcset="images/Sopas.jpg 800w, images/Sopas-300x200.jpg 300w, images/Sopas-768x513.jpg 768w, images/Sopas-600x401.jpg 600w, images/Sopas-200x134.jpg 200w"></div><div class="nb_img_caption"><div class="nb_img_caption-i"><h4 class="nb_img_title">Sopas</h4></div></div><a class="nb_img_link prettyphoto" data-rel="prettyPhoto[rel-17-373495776]" href="https://percletto.com.ar/wp-content/uploads/2019/03/Sopas.jpg"></a></div></div><div class="nb_galleryimg  nb-isotope-item isotope-item" data-width-xl="2" data-width-lg="2" data-width-md="4" data-width-sm="6"><div class="nb_galleryimg-i"><div class="nb_img"><img class src="images/Sandwiches.jpg" alt="Sandwiches" srcset="images/Sandwiches.jpg 800w, images/Sandwiches-300x200.jpg 300w, images/Sandwiches-768x513.jpg 768w, images/Sandwiches-600x401.jpg 600w, images/Sandwiches-200x134.jpg 200w"></div><div class="nb_img_caption"><div class="nb_img_caption-i"><h4 class="nb_img_title">Sandwiches</h4></div></div><a class="nb_img_link prettyphoto" data-rel="prettyPhoto[rel-17-373495776]" href="https://percletto.com.ar/wp-content/uploads/2019/03/Sandwiches.jpg"></a></div></div><div class="nb_galleryimg  nb-isotope-item isotope-item" data-width-xl="2" data-width-lg="2" data-width-md="4" data-width-sm="6"><div class="nb_galleryimg-i"><div class="nb_img"><img class src="images/Postres.jpg" alt="Postres" srcset="images/Postres.jpg 800w, images/Postres-300x200.jpg 300w, images/Postres-768x513.jpg 768w, images/Postres-600x401.jpg 600w, images/Postres-200x134.jpg 200w"></div><div class="nb_img_caption"><div class="nb_img_caption-i"><h4 class="nb_img_title">Postres</h4></div></div><a class="nb_img_link prettyphoto" data-rel="prettyPhoto[rel-17-373495776]" href="https://percletto.com.ar/wp-content/uploads/2019/03/Postres.jpg"></a></div></div><div class="nb_galleryimg  nb-isotope-item isotope-item" data-width-xl="2" data-width-lg="2" data-width-md="4" data-width-sm="6"><div class="nb_galleryimg-i"><div class="nb_img"><img class src="images/Delicias-Dulces.jpg" alt="Delicias Dulces" srcset="images/Delicias-Dulces.jpg 800w, images/Delicias-Dulces-300x200.jpg 300w, images/Delicias-Dulces-768x513.jpg 768w, images/Delicias-Dulces-600x401.jpg 600w, images/Delicias-Dulces-200x134.jpg 200w"></div><div class="nb_img_caption"><div class="nb_img_caption-i"><h4 class="nb_img_title">Delicias Dulces</h4></div></div><a class="nb_img_link prettyphoto" data-rel="prettyPhoto[rel-17-373495776]" href="https://percletto.com.ar/wp-content/uploads/2019/03/Delicias-Dulces.jpg"></a></div></div></div></div><div class="vc_empty_space" style="height: 50px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div id="locales" data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid coffee_map_1"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 100px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid coffee_guide_1 vc_custom_1549898711195 vc_row-has-fill vc_row-no-padding"><div class="column_guide wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div id="ultimate-heading-74886095925ece988" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-74886095925ece988 uvc-3414 coffee_heading" data-hspacer="no_spacer" data-halign="center" style="text-align:center"><div class="uvc-heading-spacer no_spacer" style="top"></div><div class="uvc-main-heading ult-responsive" data-ultimate-target=".uvc-heading.ultimate-heading-74886095925ece988 h2" data-responsive-json-new="{"font-size":"desktop:46px;tablet:46px;tablet_portrait:38px;mobile_landscape:38px;mobile:36px;","line-height":"desktop:46px;tablet:46px;tablet_portrait:38px;mobile_landscape:38px;mobile:36px;"}"><h2 style="font-family:&#x27;Great Vibes&#x27;;font-weight:normal;color:#be1521;">Los Locales</h2></div><div class="uvc-sub-heading ult-responsive" data-ultimate-target=".uvc-heading.ultimate-heading-74886095925ece988 .uvc-sub-heading " data-responsive-json-new="{"font-size":"desktop:25px;tablet:35px;tablet_portrait:30px;mobile_landscape:28px;mobile:26px;","line-height":"desktop:25px;tablet:35px;tablet_portrait:30px;mobile_landscape:28px;mobile:26px;"}" style="font-weight:normal;color:#ffffff;"><span style="color: #222222;">Belgrano y Palermo</span></div></div><div class="ult-animation  ult-animate-viewport  ult-no-mobile  vc_custom_1549931354095" data-animate="fadeIn" data-animation-delay="0" data-animation-duration="1" data-animation-iteration="1" style="opacity:0;" data-opacity_start_effect><div class="nb_gallery nb_gallery_masonry"><div class="filters-group filters-button-group"><a class="filter-btn is-checked" data-filter="*"><span>All</span></a><a class="filter-btn" data-filter=".percletto_palermo"><span>Percletto Palermo</span></a></div><div class="nb_galleryimgs" data-layout="isotope" data-layout_mode="mansory"><div class="nb-isotope-item isotope-item percletto_palermo"></div><div class="nb_galleryimg percletto_palermo  nb-isotope-item isotope-item" data-width-xl="3" data-width-lg="3" data-width-md="4" data-width-sm="6"><div class="nb_galleryimg-i"><div class="nb_img"><img class src="images/Percletto-Palermo1.jpg" alt="Percletto Palermo" srcset="images/Percletto-Palermo1.jpg 800w, images/Percletto-Palermo1-300x225.jpg 300w, images/Percletto-Palermo1-768x576.jpg 768w, images/Percletto-Palermo1-600x450.jpg 600w, images/Percletto-Palermo1-200x150.jpg 200w"></div><div class="nb_img_caption"><div class="nb_img_caption-i"><h4 class="nb_img_title">Percletto Palermo</h4></div></div><a class="nb_img_link prettyphoto" data-rel="prettyPhoto[rel-17-1475378528]" href="https://percletto.com.ar/wp-content/uploads/2019/03/Percletto-Palermo1.jpg"></a></div></div><div class="nb_galleryimg percletto_palermo  nb-isotope-item isotope-item" data-width-xl="3" data-width-lg="3" data-width-md="4" data-width-sm="6"><div class="nb_galleryimg-i"><div class="nb_img"><img class src="images/Percletto-Palermo2.jpg" alt="Percletto Palermo" srcset="images/Percletto-Palermo2.jpg 800w, images/Percletto-Palermo2-300x225.jpg 300w, images/Percletto-Palermo2-768x576.jpg 768w, images/Percletto-Palermo2-600x450.jpg 600w, images/Percletto-Palermo2-200x150.jpg 200w"></div><div class="nb_img_caption"><div class="nb_img_caption-i"><h4 class="nb_img_title">Percletto Palermo</h4></div></div><a class="nb_img_link prettyphoto" data-rel="prettyPhoto[rel-17-1475378528]" href="https://percletto.com.ar/wp-content/uploads/2019/03/Percletto-Palermo2.jpg"></a></div></div><div class="nb_galleryimg percletto_palermo  nb-isotope-item isotope-item" data-width-xl="3" data-width-lg="3" data-width-md="4" data-width-sm="6"><div class="nb_galleryimg-i"><div class="nb_img"><img class src="images/Percletto-Palermo3.jpg" alt="Percletto Palermo" srcset="images/Percletto-Palermo3.jpg 800w, images/Percletto-Palermo3-300x225.jpg 300w, images/Percletto-Palermo3-768x576.jpg 768w, images/Percletto-Palermo3-600x450.jpg 600w, images/Percletto-Palermo3-200x150.jpg 200w"></div><div class="nb_img_caption"><div class="nb_img_caption-i"><h4 class="nb_img_title">Percletto Palermo</h4></div></div><a class="nb_img_link prettyphoto" data-rel="prettyPhoto[rel-17-1475378528]" href="https://percletto.com.ar/wp-content/uploads/2019/03/Percletto-Palermo3.jpg"></a></div></div><div class="nb_galleryimg percletto_palermo  nb-isotope-item isotope-item" data-width-xl="3" data-width-lg="3" data-width-md="4" data-width-sm="6"><div class="nb_galleryimg-i"><div class="nb_img"><img class src="images/Percletto-Palermo4.jpg" alt="Percletto Palermo" srcset="images/Percletto-Palermo4.jpg 800w, images/Percletto-Palermo4-300x225.jpg 300w, images/Percletto-Palermo4-768x576.jpg 768w, images/Percletto-Palermo4-600x450.jpg 600w, images/Percletto-Palermo4-200x150.jpg 200w"></div><div class="nb_img_caption"><div class="nb_img_caption-i"><h4 class="nb_img_title">Percletto Palermo</h4></div></div><a class="nb_img_link prettyphoto" data-rel="prettyPhoto[rel-17-1475378528]" href="https://percletto.com.ar/wp-content/uploads/2019/03/Percletto-Palermo4.jpg"></a></div></div><div class="nb_galleryimg percletto_palermo  nb-isotope-item isotope-item" data-width-xl="3" data-width-lg="3" data-width-md="4" data-width-sm="6"><div class="nb_galleryimg-i"><div class="nb_img"><img class src="images/Percletto-Palermo5.jpg" alt="Percletto Palermo" srcset="images/Percletto-Palermo5.jpg 800w, images/Percletto-Palermo5-300x225.jpg 300w, images/Percletto-Palermo5-768x576.jpg 768w, images/Percletto-Palermo5-600x450.jpg 600w, images/Percletto-Palermo5-200x150.jpg 200w"></div><div class="nb_img_caption"><div class="nb_img_caption-i"><h4 class="nb_img_title">Percletto Palermo</h4></div></div><a class="nb_img_link prettyphoto" data-rel="prettyPhoto[rel-17-1475378528]" href="https://percletto.com.ar/wp-content/uploads/2019/03/Percletto-Palermo5.jpg"></a></div></div><div class="nb_galleryimg percletto_palermo  nb-isotope-item isotope-item" data-width-xl="3" data-width-lg="3" data-width-md="4" data-width-sm="6"><div class="nb_galleryimg-i"><div class="nb_img"><img class src="images/Percletto-Palermo6.jpg" alt="Percletto Palermo" srcset="images/Percletto-Palermo6.jpg 800w, images/Percletto-Palermo6-300x225.jpg 300w, images/Percletto-Palermo6-768x576.jpg 768w, images/Percletto-Palermo6-600x450.jpg 600w, images/Percletto-Palermo6-200x150.jpg 200w"></div><div class="nb_img_caption"><div class="nb_img_caption-i"><h4 class="nb_img_title">Percletto Palermo</h4></div></div><a class="nb_img_link prettyphoto" data-rel="prettyPhoto[rel-17-1475378528]" href="https://percletto.com.ar/wp-content/uploads/2019/03/Percletto-Palermo6.jpg"></a></div></div></div></div></div><div class="vc_empty_space" style="height: 32px"><span class="vc_empty_space_inner"></span></div>
+<div class="vc_row wpb_row vc_inner vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="wpb_gmaps_widget wpb_content_element vc_custom_1556164422736 wpb_animate_when_almost_visible wpb_left-to-right left-to-right">
+	<h2 class="wpb_heading wpb_map_heading">Percletto Belgrano</h2>	<div class="wpb_wrapper">
+		<div class="wpb_map_wraper">
+			<iframe src="embed.html" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>		</div>
+	</div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="wpb_gmaps_widget wpb_content_element vc_custom_1549921206909 wpb_animate_when_almost_visible wpb_right-to-left right-to-left">
+	<h2 class="wpb_heading wpb_map_heading">Percletto Palermo</h2>	<div class="wpb_wrapper">
+		<div class="wpb_map_wraper">
+			<iframe src="embed_1.html" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>		</div>
+	</div>
+</div>
+</div></div></div></div></div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div id="contacto" data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid coffee_map_1"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 100px"><span class="vc_empty_space_inner"></span></div>
+</div></div></div></div><div class="vc_row-full-width vc_clearfix"></div><div class="vc_row wpb_row vc_row-fluid coffee_about vc_custom_1549751097178"><div class="about_1_left wpb_animate_when_almost_visible wpb_left-to-right left-to-right wpb_column vc_column_container vc_col-sm-6 vc_col-lg-5 vc_col-md-6 vc_col-xs-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_empty_space" style="height: 145px"><span class="vc_empty_space_inner"></span></div>
+
+	<div class="wpb_single_image wpb_content_element vc_align_center">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper vc_box_shadow  vc_box_border_grey"><img width="800" height="600" src="images/Percletto-Palermo1.jpg" class="vc_single_image-img attachment-large" alt loading="lazy" srcset="images/Percletto-Palermo1.jpg 800w, images/Percletto-Palermo1-300x225.jpg 300w, images/Percletto-Palermo1-768x576.jpg 768w, images/Percletto-Palermo1-600x450.jpg 600w, images/Percletto-Palermo1-200x150.jpg 200w" sizes="(max-width: 800px) 100vw, 800px"></div>
+		</figure>
+	</div>
+</div></div></div><div class="wpb_animate_when_almost_visible wpb_fadeIn fadeIn wpb_column vc_column_container vc_col-sm-6 vc_col-lg-offset-1 vc_col-lg-6 vc_col-md-offset-0 vc_col-md-6 vc_col-xs-12 vc_col-has-fill"><div class="vc_column-inner vc_custom_1550082287306"><div class="wpb_wrapper"><div id="ultimate-heading-48246095925ed1e72" class="uvc-heading ult-adjust-bottom-margin ultimate-heading-48246095925ed1e72 uvc-988 coffee_heading" data-hspacer="no_spacer" data-halign="center" style="text-align:center"><div class="uvc-heading-spacer no_spacer" style="top"></div><div class="uvc-main-heading ult-responsive" data-ultimate-target=".uvc-heading.ultimate-heading-48246095925ed1e72 h2" data-responsive-json-new="{"font-size":"desktop:40px;tablet:40px;tablet_portrait:38px;mobile_landscape:38px;mobile:34px;","line-height":"desktop:46px;tablet:46px;tablet_portrait:38px;mobile_landscape:38px;mobile:34px;"}"><h2 style="font-family:&#x27;Great Vibes&#x27;;font-weight:normal;color:#be1521;">Escribinos</h2></div><div class="uvc-sub-heading ult-responsive" data-ultimate-target=".uvc-heading.ultimate-heading-48246095925ed1e72 .uvc-sub-heading " data-responsive-json-new="{"font-size":"desktop:25px;tablet:35px;tablet_portrait:30px;mobile_landscape:28px;mobile:24px;","line-height":"desktop:25px;tablet:35px;tablet_portrait:30px;mobile_landscape:28px;mobile:24px;"}" style="font-weight:normal;color:#222222;">Contacto</div></div><div role="form" class="wpcf7" id="wpcf7-f281-p17-o1" lang="en-US" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/#wpcf7-f281-p17-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="281">
+<input type="hidden" name="_wpcf7_version" value="5.4.1">
+<input type="hidden" name="_wpcf7_locale" value="en_US">
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f281-p17-o1">
+<input type="hidden" name="_wpcf7_container_post" value="17">
+<input type="hidden" name="_wpcf7_posted_data_hash" value>
+<input type="hidden" name="_wpcf7_recaptcha_response" value>
+</div>
+<p><span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Nombre *"></span> </p>
+<p><span class="wpcf7-form-control-wrap email"><input type="email" name="email" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="E-mail *"></span> </p>
+<p><span class="wpcf7-form-control-wrap telefono"><input type="text" name="telefono" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Teléfono *"></span> </p>
+<p>¿Cómo nos conociste? *<br>
+<span class="wpcf7-form-control-wrap Referencia"><span class="wpcf7-form-control wpcf7-radio"><span class="wpcf7-list-item first"><input type="radio" name="Referencia" value="Recibió un e-mail (newsletter)"><span class="wpcf7-list-item-label">Recibió un e-mail (newsletter)</span></span><span class="wpcf7-list-item"><input type="radio" name="Referencia" value="Anuncio de texto en Google"><span class="wpcf7-list-item-label">Anuncio de texto en Google</span></span><span class="wpcf7-list-item"><input type="radio" name="Referencia" value="Facebook"><span class="wpcf7-list-item-label">Facebook</span></span><span class="wpcf7-list-item"><input type="radio" name="Referencia" value="Mercado Libre"><span class="wpcf7-list-item-label">Mercado Libre</span></span><span class="wpcf7-list-item"><input type="radio" name="Referencia" value="Por recomendación"><span class="wpcf7-list-item-label">Por recomendación</span></span><span class="wpcf7-list-item"><input type="radio" name="Referencia" value="Redes Sociales"><span class="wpcf7-list-item-label">Redes Sociales</span></span><span class="wpcf7-list-item last"><input type="radio" name="Referencia" value="Otro"><span class="wpcf7-list-item-label">Otro</span></span></span></span></p>
+<p><span class="wpcf7-form-control-wrap message"><textarea name="message" cols="40" rows="5" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Mensaje *"></textarea></span> </p>
+<p><input type="submit" value="Enviar" class="wpcf7-form-control wpcf7-submit"></p>
+<p><span style="font-size: 12pt; color: #a3a3a3;">* Campos requeridos.</span></p>
+<div class="wpcf7-response-output" aria-hidden="true"></div></form></div></div></div></div></div>
+                            </div><!-- .entry-content -->
+                        </article><!-- #post-## -->
+                        
+				</main><!-- #main -->
+			</div><!-- #primary -->
+					</div>
+	</div>
+
+
+		</div><!-- #content -->
+		<footer id="colophon" class="site-footer">
+            					<div class="footer-top-section layout-9">
+						<div class="container">
+							<div class="row">
+								<div class="col-3"><div id="text-6" class="widget widget_text"><h3 class="widget-title">Percletto Belgrano</h3>			<div class="textwidget"><h5><span style="color: #4AA939;">Av. Cramer 2799</span><br>
+<span style="color: #4AA939;"> Bs. As., Argentina</span><br>
+<span style="color: #4AA939;"> <strong>Tel.: </strong>7504-0807</span><br><br>
+<span style="color: #BD0926;">Horarios:<br>
+<span style="color: #4AA939;"> Lunes a Viernes <br> 10 a 20 hs.<br>
+<span style="color: #4AA939;"> Sáb., Dom. y Feriados <br> 10 a 15 hs.<br>
+</span></span></span></h5></div>
+		</div></div><div class="col-3"><div id="text-5" class="widget widget_text"><h3 class="widget-title">Percletto Palermo</h3>			<div class="textwidget"><h5><span style="color: #4AA939;">Santos Dumont 2495</span><br>
+<span style="color: #4AA939;"> Bs. As., Argentina</span><br>
+<span style="color: #4AA939;"> <strong>Tel.:</strong> 7512-7180</span><br><br>
+<span style="color: #BD0926;">Horarios:<br>
+<span style="color: #4AA939;"> Lunes a Viernes <br> 10 a  20 hs.<br>
+<span style="color: #4AA939;"> Sáb., Dom. y Feriados <br> 10 a 15 hs.<br>
+</span></span></span></h5></div>
+		</div></div><div class="col-3"><div id="text-8" class="widget widget_text"><h3 class="widget-title">Planta Quilmes</h3>			<div class="textwidget"><h5><span style="color: #4AA939;">Suipacha 77, Quilmes</span><br>
+<span style="color: #4AA939;"> Bs. As., Argentina</span><br>
+<span style="color: #4AA939;"> <strong>Tel.:</strong> 15 2878-1449</span><br><br>
+<span style="color: #BD0926;">Horarios:<br>
+<span style="color: #4AA939;"> Lunes a Viernes <br> 8 a 16 hs.<br>
+</span></span></h5>
+</div>
+		</div></div><div class="col-3"><div id="text-9" class="widget widget_text"><h3 class="widget-title">Pedidos Delivery</h3>			<div class="textwidget">Lunes a viernes de 11 a 20 hs. <br>
+<strong>Palermo: </strong><br>
+Lunes a viernes de 10 a 16 hs. <br>
+<strong>Belgrano: </strong><br>
+<br>Lunes a viernes de 9 a 16 hs.<br>
+Con costo adicional según la zona. Consultanos.<br>
+<a title="Pedidos Online" href="https://percletto.com.ar/#viandas"> ¡Hacenos tu pedido online acá! </a> </div>
+		</div></div>							</div>
+						</div>
+					</div>
+	                        				<div class="footer-abs-section">
+					<div class="container">
+						<div class="row">
+							<div class="footer-abs-middle"><span style="color: #fff">Copyright © 2021 | </span><span style="color: #BE1521">
+Percletto </span><span style="color: #4FB03E"> Comida Saludable</span><span style="color: #fff"> - Diseño y Hosting:
+<a href="http://www.seahorsedesign.com.ar/" target="_blank">Seahorse Design</a></span></div>						</div>
+					</div>
+				</div>
+					</footer><!-- #colophon -->
+    	</div><!-- #site-wrapper -->
+</div><!-- #page -->
+
+			<a id="scroll-to-top" href="#" title="Scroll to Top">Top</a>
+			<!--Start of Tawk.to Script (0.5.4)-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{};
+var Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5cc8618dd07d7e0c63914c36/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script (0.5.4)-->
+
+<div class="xoo-wsc-modal">
+
+					<div class="xoo-wsc-basket" style="display:none;">
+							<span class="xoo-wsc-items-count">0</span>
+						<span class="xoo-wsc-icon-basket1 xoo-wsc-bki"></span>
+		</div>
+	
+	<div class="xoo-wsc-opac"></div>
+	<div class="xoo-wsc-container">
+			</div>
+</div>
+
+<div class="xoo-wsc-notice-box" style="display: none;">
+	<div>
+	  <span class="xoo-wsc-notice"></span>
+	</div>
+</div>        <div class="cart-notice-wrap">
+            <div class="cart-notice">
+                <p>Product has been added to cart</p>
+                <p class="cart-url button"><a href="https://percletto.com.ar/carrito-de-compras/">View Cart</a></p>
+                <span><i class="icon-cancel-circle"></i></span>
+            </div>
+        </div>
+        <link rel="stylesheet" property="stylesheet" id="rs-icon-set-fa-icon-css" href="css/font-awesome.css" type="text/css" media="all">	<script type="text/javascript">
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+				<script type="text/javascript">
+				function revslider_showDoubleJqueryError(sliderID) {
+					var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+					errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+					errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+					errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+					errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
+						jQuery(sliderID).show().html(errorMessage);
+				}
+			</script>
+			<link rel="stylesheet" id="animate-css-css" href="css/animate.min_1.css" type="text/css" media="all">
+<link rel="stylesheet" id="isotope-css-css" href="css/isotope.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="prettyphoto-css" href="css/prettyPhoto.min.css" type="text/css" media="all">
+<script type="text/javascript" defer src="js/wp-polyfill.min.js" id="wp-polyfill-js"></script>
+<script type="text/javascript" id="wp-polyfill-js-after">
+( 'fetch' in window ) || document.write( '<script defer src="https://percletto.com.ar/wp-includes/js/dist/vendor/wp-polyfill-fetch.min.js"></scr' + 'ipt>' );( document.contains ) || document.write( '<script defer src="https://percletto.com.ar/wp-includes/js/dist/vendor/wp-polyfill-node-contains.min.js"></scr' + 'ipt>' );( window.DOMRect ) || document.write( '<script defer src="https://percletto.com.ar/wp-includes/js/dist/vendor/wp-polyfill-dom-rect.min.js"></scr' + 'ipt>' );( window.URL && window.URL.prototype && window.URLSearchParams ) || document.write( '<script defer src="https://percletto.com.ar/wp-includes/js/dist/vendor/wp-polyfill-url.min.js"></scr' + 'ipt>' );( window.FormData && window.FormData.prototype.keys ) || document.write( '<script defer src="https://percletto.com.ar/wp-includes/js/dist/vendor/wp-polyfill-formdata.min.js"></scr' + 'ipt>' );( Element.prototype.matches && Element.prototype.closest ) || document.write( '<script defer src="https://percletto.com.ar/wp-includes/js/dist/vendor/wp-polyfill-element-closest.min.js"></scr' + 'ipt>' );( 'objectFit' in document.documentElement.style ) || document.write( '<script defer src="https://percletto.com.ar/wp-includes/js/dist/vendor/wp-polyfill-object-fit.min.js"></scr' + 'ipt>' );
+</script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/percletto.com.ar\/wp-json\/","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="js/index.js" id="contact-form-7-js"></script>
+<script type="text/javascript" defer src="js/script.min.js" id="jquery-smooth-scroll-js"></script>
+<script type="text/javascript" id="stickThis-js-extra">
+/* <![CDATA[ */
+var sticky_anything_engage = {"element":".middle-section-wrap","topspace":"0","minscreenwidth":"0","maxscreenwidth":"999999","zindex":"99999","legacymode":"","dynamicmode":"","debugmode":"","pushup":"","adminbar":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="js/stickThis.js" id="stickThis-js"></script>
+<script type="text/javascript" id="theme-my-login-js-extra">
+/* <![CDATA[ */
+var themeMyLogin = {"action":"","errors":[]};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="js/theme-my-login.min.js" id="theme-my-login-js"></script>
+<script type="text/javascript" defer src="js/js.cookie.min.js" id="js-cookie-js"></script>
+<script type="text/javascript" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="js/woocommerce.min.js" id="woocommerce-js"></script>
+<script type="text/javascript" id="wc-cart-fragments-js-extra">
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_be88050d69e46a7d0743f204e7f28ba8","fragment_name":"wc_fragments_be88050d69e46a7d0743f204e7f28ba8","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="js/cart-fragments.min.js" id="wc-cart-fragments-js"></script>
+<script type="text/javascript" defer src="js/sdk.js" id="facebook-jssdk-js"></script>
+<script type="text/javascript" defer src="js/owl.carousel.min.js" id="vc_nb_owl-carousel-js"></script>
+<script type="text/javascript" defer src="js/isotope.pkgd.min.js" id="isotope-js"></script>
+<script type="text/javascript" defer src="js/jquery.matchHeight-min.js" id="equalheightJs-js"></script>
+<script type="text/javascript" defer src="js/script.js" id="nbfwJs-js"></script>
+<script type="text/javascript" id="q2w3_fixed_widget-js-extra">
+/* <![CDATA[ */
+var q2w3_sidebar_options = [{"sidebar":"default-sidebar","margin_top":120,"margin_bottom":430,"stop_id":"","screen_max_width":800,"screen_max_height":0,"width_inherit":true,"refresh_interval":1500,"window_load_hook":true,"disable_mo_api":true,"widgets":["nav_menu-5"]},{"sidebar":"shop-sidebar","margin_top":120,"margin_bottom":430,"stop_id":"","screen_max_width":800,"screen_max_height":0,"width_inherit":true,"refresh_interval":1500,"window_load_hook":true,"disable_mo_api":true,"widgets":["nav_menu-7"]}];
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="js/q2w3-fixed-widget.min.js" id="q2w3_fixed_widget-js"></script>
+<script type="text/javascript" defer src="js/api.js" id="google-recaptcha-js"></script>
+<script type="text/javascript" id="wpcf7-recaptcha-js-extra">
+/* <![CDATA[ */
+var wpcf7_recaptcha = {"sitekey":"6Lf2Q6oUAAAAAEFylntYhcfUfwZUYSvNFpHeKFmL","actions":{"homepage":"homepage","contactform":"contactform"}};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="js/index_1.js" id="wpcf7-recaptcha-js"></script>
+<script type="text/javascript" defer src="js/jquery.magnific-popup.min.js" id="magnific-popup-js"></script>
+<script type="text/javascript" defer src="js/swiper.jquery.min.js" id="swiper-js"></script>
+<script type="text/javascript" defer src="js/jquery.waypoints.min.js" id="nbfoody_waypoints-js"></script>
+<script type="text/javascript" id="nbfoody_front_script-js-extra">
+/* <![CDATA[ */
+var nbfoody = {"ajaxurl":"\/wp-admin\/admin-ajax.php","upsells_columns":"3","related_columns":"3","cross_sells_columns":"4","thumb_pos":"bottom-thumb","menu_resp":"992","is2_2":""};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="js/main.js" id="nbfoody_front_script-js"></script>
+<script type="text/javascript" defer src="js/cart.js" id="nbfoody_cart_script-js"></script>
+<script type="text/javascript" id="xoo-wsc-js-extra">
+/* <![CDATA[ */
+var xoo_wsc_localize = {"adminurl":"https:\/\/percletto.com.ar\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","ajax_atc":"1","added_to_cart":"","auto_open_cart":"1","atc_icons":"1","atc_reset":"false","trigger_class":null,"cont_height":"full_screen"};
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="js/xoo-wsc-public.js" id="xoo-wsc-js"></script>
+<script type="text/javascript" defer src="js/wp-embed.min.js" id="wp-embed-js"></script>
+<script type="text/javascript" defer src="js/js_composer_front.min.js" id="wpb_composer_front_js-js"></script>
+<script type="text/javascript" defer src="js/waypoints.min.js" id="waypoints-js"></script>
+<script type="text/javascript" defer src="js/jquery.prettyPhoto.min.js" id="prettyphoto-js"></script>
+
+</body>
+</html>

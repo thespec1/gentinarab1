@@ -1,0 +1,9 @@
+/*# Custom fonts*/
+
+@font-face {
+  font-family: 'NexaRust';
+  src: url("../fonts/NexaRustScriptL-0.eot");
+  src: url("../fonts/NexaRustScriptL-0.woff2") format("woff2"), url("../fonts/NexaRustScriptL-0.woff") format("woff"), url("../fonts/NexaRustScriptL-0.ttf") format("truetype"), url("../fonts/NexaRustScriptL-0.svg#NexaRustScriptL-0") format("svg"), url("../fonts/NexaRustScriptL-0.eot#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
